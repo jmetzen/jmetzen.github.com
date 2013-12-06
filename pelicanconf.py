@@ -5,9 +5,9 @@ from __future__ import unicode_literals
 from os import environ
 
 
-SITENAME = u'Kevin Richardson'
-AUTHOR = u'Kevin Richardson'
-TAGLINE = u'explorer & tinkerer'
+SITENAME = u"Jan's Blog"
+AUTHOR = u'Jan Hendrik Metzen'
+TAGLINE = u''
 SITEURL = 'http://localhost:8000'
 FEED_DOMAIN = SITEURL
 FEED_ATOM = 'feeds/all.atom.xml'
@@ -19,7 +19,7 @@ DATE_FORMATS = {
 }
 DEFAULT_PAGINATION = 1
 
-THEME = 'themes/pelican-foundation'
+THEME = 'themes/bootstrap2'
 
 
 # display items
@@ -36,7 +36,6 @@ TWITTER_USERNAME = u'kfr_2'
 FILES_TO_COPY = (
     ('extra/README', 'README'),
     ('extra/LICENSE', 'LICENSE'),
-    ('extra/CNAME', 'CNAME'),
     ('extra/humans.txt', 'humans.txt'),
     ('extra/favicon.ico', 'favicon.ico'),
     ('extra/404.html', '404.html'),
@@ -46,10 +45,10 @@ FILES_TO_COPY = (
 PLUGIN_PATH = 'pelican-plugins'
 PLUGINS = ['sitemap', 'gist']
 
-GITHUB_USERNAME = 'kfr2'
-GITHUB_AUTH_TOKEN = environ.get('GITHUB_AUTH_TOKEN')
-if GITHUB_AUTH_TOKEN is None:
-    raise NotImplementedError("You should define GITHUB_AUTH_TOKEN in your OS's environment.")
+GITHUB_USERNAME = 'jmetzen'
+#GITHUB_AUTH_TOKEN = environ.get('GITHUB_AUTH_TOKEN')
+#if GITHUB_AUTH_TOKEN is None:
+#    raise NotImplementedError("You should define GITHUB_AUTH_TOKEN in your OS's environment.")
 
 SITEMAP = {
     'format': 'xml',
