@@ -1,122 +1,179 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" ><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="en" ><!--<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Jan's Blog - python</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Jan Hendrik Metzen">
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>python | Kevin Richardson</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://magically.us/theme/css/foundation.min.css" />
-    <link rel="stylesheet" href="http://magically.us/theme/css/pelican-foundation.css" />
-    <script src="http://magically.us/theme/js/vendor/custom.modernizr.js"></script>
+    <!-- Le styles -->
+    <link rel="stylesheet" href="http://jmetzen.github.io/theme/css/bootstrap.min.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+      .tag-1 {
+        font-size: 13pt;
+      }
+      .tag-2 {
+        font-size: 10pt;
+      }
+      .tag-2 {
+        font-size: 8pt;
+      }
+      .tag-4 {
+        font-size: 6pt;
+     }
+    </style>
+    <link href="http://jmetzen.github.io/theme/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="http://jmetzen.github.io/theme/css/font-awesome.css" rel="stylesheet">
 
-            <link href="http://magically.us/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Kevin Richardson ATOM Feed" />
-                <link href="http://magically.us/feeds/all.rss" type="application/rss+xml" rel="alternate" title="Kevin Richardson RSS Feed" />
-    </head>
+    <link href="http://jmetzen.github.io/theme/css/pygments.css" rel="stylesheet">
 
-<body>
-    <div class="row">
-        <!-- author information/sidebar -->
-        <div class="large-3 columns">
-            <figure id="user_logo">
-                <a href="http://magically.us"><div class="logo"><img src="https://dl.dropboxusercontent.com/u/7030113/www/art-noveau-ornament.png" alt="Kevin Richardson"></div></a>
-            </figure>
-            <h1 class="subheader"><small>Kevin Richardson</small></h1>
-            <p class="hide-for-small">explorer & tinkerer</p>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-                            <div>
-                    <ul class="side-nav">
-                                                                                    <li><a href="http://magically.us/pages/about.html">about</a></li>
-                                                            <li><a href="http://magically.us/pages/projects.html">projects</a></li>
-                                                                                                        <li><a href="/archives.html">archives</a></li>
-                                            </ul>
-                </div>
-                    </div>
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="http://jmetzen.github.io/theme/images/favicon.ico">
+    <link rel="apple-touch-icon" href="http://jmetzen.github.io/theme/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://jmetzen.github.io/theme/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://jmetzen.github.io/theme/images/apple-touch-icon-114x114.png">
 
-        <!-- main content -->
-        <div class="large-9 columns">
-                <h2>Posts tagged:  python</h2>
-    <ul>
-                    <li><a href="http://magically.us/2013-07-31/pelican-gist-comments-plugin.html">Pelican-Gist-Comments Plugin</a> <small>(<time datetime="2013-07-31T09:05:00" pubdate>2013-07-31</time>)</small></li>
-                    <li><a href="http://magically.us/2013-07-29/thoughts-on-pyohio-2013.html">Thoughts on PyOhio 2013</a> <small>(<time datetime="2013-07-29T07:31:00" pubdate>2013-07-29</time>)</small></li>
-                    <li><a href="http://magically.us/2013-05-28/introducing-cmsplugin-biography.html">Introducing cmsplugin-biography</a> <small>(<time datetime="2013-05-28T21:44:00" pubdate>2013-05-28</time>)</small></li>
-                    <li><a href="http://magically.us/2013-05-14/pelican-gist-plugin.html">Pelican-Gist Plugin</a> <small>(<time datetime="2013-05-14T19:58:00" pubdate>2013-05-14</time>)</small></li>
-                    <li><a href="http://magically.us/2013-01-01/hello-world.html">Hello World</a> <small>(<time datetime="2013-01-01T19:55:00" pubdate>2013-01-01</time>)</small></li>
+    <link href="http://jmetzen.github.io/" type="application/atom+xml" rel="alternate" title="Jan's Blog ATOM Feed" />
+        <link href="http://jmetzen.github.io/feeds/all.rss" type="application/atom+xml" rel="alternate" title="Jan's Blog RSS Feed" />
+    
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="http://jmetzen.github.io/index.html">Jan's Blog </a>
+          <div class="nav-collapse">
+            <ul class="nav">
+                                <li><a href="/archives.html">archives</a></li>
+                                                          <li><a href="http://jmetzen.github.io/pages/about.html">about</a></li>
+                                        <li class="divider-vertical"></li>
+                                              <li >
+                    <a href="http://jmetzen.github.io/category/2013.html">
+						<i class="icon-folder-open icon-large"></i>2013
+					</a>
+                  </li>
+              
+                          <ul class="nav pull-right">
+                                <li><a href="http://jmetzen.github.io/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+                          </ul>
+
             </ul>
+            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+          </div><!--/.nav-collapse -->
         </div>
+      </div>
     </div>
 
-    <!-- footer -->
-    <footer class="row">
-                    <div class="large-12 columns">
-                <hr />
-                <div class="row">
-                    <div class="large-6 columns">
-                                            <a href="http://magically.us/feeds/all.atom.xml"><img src="/theme/img/rss.png" alt="ATOM feed" /></a>
-                    
-                                            <a href="https://twitter.com/kfr_2"><img src="/theme/img/twitter.png" alt="Twitter" /></a>
-                    
-                    
-                    
-                    
-                                        </div>
-                    <div class="large-6 columns">
-                        <p class="right"><small>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">CC BY-SA</a>.&nbsp;Powered by <a href="http://getpelican.com/">Pelican</a> and <a href="https://github.com/kfr2/pelican-foundation">Pelican-Foundation</a>.</small></p>
-                    </div>
-                </div>
-            </div>
-            </footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="span9" id="content">
+                            <div class="article">
+                <h1><a href="http://jmetzen.github.io/2013-12-06/hello-world.html">Hello World</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-12-06T16:07:00">
+        <i class="icon-calendar"></i>2013-12-06
+</abbr>
+<span class="label">By</span>
+<a href="http://jmetzen.github.io/author/jan-hendrik-metzen.html"><i class="icon-user"></i>Jan Hendrik Metzen</a>
+<span class="label">Category</span>
+<a href="http://jmetzen.github.io/category/2013.html"><i class="icon-folder-open"></i>2013</a>.
 
-    <script>
-        document.write('<script src=' +
-        ('__proto__' in {} ? 'http://magically.us/theme/js/vendor/zepto' : 'http://magically.us/theme/js/vendor/jquery') +
-        '.js><\/script>')
-    </script>
-    <script src="http://magically.us/theme/js/foundation.min.js"></script>
-  <!--
-  <script src="js/foundation/foundation.js"></script>
-  
-  <script src="js/foundation/foundation.alerts.js"></script>
-  
-  <script src="js/foundation/foundation.clearing.js"></script>
-  
-  <script src="js/foundation/foundation.cookie.js"></script>
-  
-  <script src="js/foundation/foundation.dropdown.js"></script>
-  
-  <script src="js/foundation/foundation.forms.js"></script>
-  
-  <script src="js/foundation/foundation.joyride.js"></script>
-  
-  <script src="js/foundation/foundation.magellan.js"></script>
-  
-  <script src="js/foundation/foundation.orbit.js"></script>
-  
-  <script src="js/foundation/foundation.placeholder.js"></script>
-  
-  <script src="js/foundation/foundation.reveal.js"></script>
-  
-  <script src="js/foundation/foundation.section.js"></script>
-  
-  <script src="js/foundation/foundation.tooltips.js"></script>
-  
-  <script src="js/foundation/foundation.topbar.js"></script>
-  
-  -->
-  
-    <script>
-        $(document).foundation();
-    </script>
-        <script type="text/javascript">
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-        try {
-            var pageTracker = _gat._getTracker("UA-24062285-2");
-            pageTracker._trackPageview();
-        } catch(err) {}
-    </script>
-</body>
+
+<span class="label">Tags</span>
+	<a href="http://jmetzen.github.io/tag/meta.html"><i class="icon-tag"></i>meta</a>
+	<a href="http://jmetzen.github.io/tag/github.html"><i class="icon-tag"></i>github</a>
+	<a href="http://jmetzen.github.io/tag/writing.html"><i class="icon-tag"></i>writing</a>
+	<a href="http://jmetzen.github.io/tag/python.html"><i class="icon-tag"></i>python</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>Hello world.</p>
+                        <a class="btn primary xsmall" href="http://jmetzen.github.io/2013-12-06/hello-world.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+        
+                                <section id="content" class="body">
+                <h1>Pages</h1>
+                                        <li><a href="http://jmetzen.github.io/pages/about.html">about</a></li>
+                                </section>
+                </div><!--/span-->
+
+                <div class="span3 well sidebar-nav" id="sidebar">
+            <ul class="nav nav-list">
+
+<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
+<li>
+<a href="http://jmetzen.github.io/category/2013.html">
+    <i class="icon-folder-open icon-large"></i>2013
+</a>
+</li>
+
+<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+<li class="tag-4">
+    <a href="http://jmetzen.github.io/tag/github.html">
+        <i class="icon-tag icon-large"></i>github
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jmetzen.github.io/tag/meta.html">
+        <i class="icon-tag icon-large"></i>meta
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jmetzen.github.io/tag/writing.html">
+        <i class="icon-tag icon-large"></i>writing
+    </a>
+</li>
+<li class="tag-4">
+    <a href="http://jmetzen.github.io/tag/python.html">
+        <i class="icon-tag icon-large"></i>python
+    </a>
+</li>
+
+
+</ul>        </div><!--/.well -->
+
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <address id="about">
+                Proudly powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
+                                which takes great advantage of <a href="http://python.org">Python <i class="icon-external-link"></i></a>.
+        </address><!-- /#about -->
+
+        <p>The theme is from <a href="http://twitter.github.com/bootstrap/">Bootstrap from Twitter <i class="icon-external-link"></i></a>,
+                   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome <i class="icon-external-link"></i></a>, thanks!</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+            
+    <!-- Le javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://jmetzen.github.io/theme/js/jquery-1.7.2.min.js"></script>
+    <script src="http://jmetzen.github.io/theme/js/bootstrap.min.js"></script>
+  </body>
 </html>
