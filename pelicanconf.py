@@ -6,31 +6,31 @@ import os
 
 
 SITENAME = u"Jan's Blog"
+SITESUBTITLE = u'Test Site-Subtitle'
 AUTHOR = u'Jan Hendrik Metzen'
 TAGLINE = u''
 SITEURL = 'http://localhost:8000'
 FEED_DOMAIN = SITEURL
 #FEED_ATOM = 'feeds/all.atom.xml'
-#FEED_RSS = 'feeds/all.rss'
+FEED_RSS = 'feeds/all.rss'
 TIMEZONE = 'Europe/Berlin'
 DEFAULT_LANG = u'en'
 DATE_FORMATS = {
     'en': '%Y-%m-%d',
 }
-DEFAULT_PAGINATION = 1
+
+DEFAULT_PAGINATION = 5
 
 THEME = 'themes/pelican-octopress'
 
 
 # display items
-LOGO_URL = 'https://dl.dropboxusercontent.com/u/7030113/www/art-noveau-ornament.png'
 MENUITEMS = (
-    ('archives', '/archives.html'),
+    ('Archives', '/archives.html'),
+    ('Home Page', 'http://www.informatik.uni-bremen.de/~jhm/')
 )
-DISPLAY_PAGES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = False
 FOOTER_MESSAGE = u'This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">CC BY-SA</a>.'
-#TWITTER_USERNAME = u'kfr_2'
-
 
 #STATIC_PATHS = ()
 FILES_TO_COPY = (
@@ -43,7 +43,7 @@ FILES_TO_COPY = (
 
 # Plugins and their settings.
 PLUGIN_PATH = 'pelican-plugins'
-PLUGINS = [#'sitemap',
+PLUGINS = [#'summary', #'sitemap',
            'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.youtube', 'liquid_tags.include_code',
            'liquid_tags.notebook']
@@ -57,21 +57,17 @@ else:
     EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
 
 GITHUB_USERNAME = 'jmetzen'
-#GITHUB_AUTH_TOKEN = environ.get('GITHUB_AUTH_TOKEN')
+GITHUB_REPO_COUNT= 5
+GITHUB_SKIP_FORK= False
+GITHUB_SHOW_USER_LINK= False
+#GITHUB_AUTH_TOKEN = os.environ.get('GITHUB_AUTH_TOKEN')
 #if GITHUB_AUTH_TOKEN is None:
 #    raise NotImplementedError("You should define GITHUB_AUTH_TOKEN in your OS's environment.")
 
-SITEMAP = {
-    'format': 'xml',
-    'priorities': {
-        'articles': 0.5,
-        'indexes': 0.5,
-        'pages': 0.5
-    },
-    'changefreqs': {
-        'articles': 'weekly',
-        'indexes': 'weekly',
-        'pages': 'monthly'
-    }
-}
+# Search
+SEARCH_BOX = True
 
+# Sharing
+GOOGLE_PLUS_ID = "114354937594844867963"
+GOOGLE_PLUS_ONE = True
+GOOGLE_PLUS_HIDDEN = False
