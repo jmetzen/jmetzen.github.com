@@ -16,3 +16,5 @@ DELETE_OUTPUT_DIRECTORY = False
 # Uncomment following line for absolute URLs in production:
 #RELATIVE_URLS = False
 #GOOGLE_ANALYTICS = "UA-24062285-2"
+
+DISQUS_SITENAME = 'jmetzen'
