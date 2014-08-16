@@ -5,8 +5,8 @@ from __future__ import unicode_literals
 import os
 
 
-SITENAME = u"Jan's Blog"
-SITESUBTITLE = u'Test Site-Subtitle'
+SITENAME = u"Jan Hendrik Metzen"
+SITESUBTITLE = u'My personal blog on python and machine learning'
 AUTHOR = u'Jan Hendrik Metzen'
 TAGLINE = u''
 SITEURL = 'http://localhost:8000'
@@ -27,7 +27,7 @@ THEME = 'themes/pelican-octopress'
 # display items
 MENUITEMS = (
     ('Archives', '/archives.html'),
-    ('Home Page', 'http://www.informatik.uni-bremen.de/~jhm/')
+    ('Home Page (work)', 'http://www.informatik.uni-bremen.de/~jhm/')
 )
 DISPLAY_PAGES_ON_MENU = False
 FOOTER_MESSAGE = u'This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">CC BY-SA</a>.'
