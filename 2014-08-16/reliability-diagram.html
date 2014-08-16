@@ -1748,9 +1748,12 @@ init_mathjax();
 </form>
 
 <ul class="main-navigation">
-    <li><a href="/pages/about.html">About</a></li>
     <li><a href="http://www.informatik.uni-bremen.de/~jhm/">Home Page (work)</a></li>
     <li><a href="/archives.html">Archives</a></li>
+      <li><a href="http://jmetzen.github.io/pages/about.html">About</a></li>
+    <li class="active">
+    <a href="http://jmetzen.github.io/category/2014.html">2014</a>
+    </li>
 </ul></nav>
   <div id="main">
     <div id="content">
@@ -3380,7 +3383,8 @@ ZgAAAABJRU5ErkJggg==
 <li>One alternative to Platt-calibration is Isotonic Regression. While Platt-calibration fits a sigmoid, Isotonic Regression fits an arbitrary increasing (isotonic) function. Thus, it has a weaker inducttive bias and can be applied more broadly (also in situations where the calibration curve is not sigmoid). The downside is that it typically requires more calibration data because its inductive bias is weaker. This can also be seen in the <strong>SVC + IR</strong> curve: While the sigmoid shape of the pure SVC scores is removed and the calibration curve does not show a clear bias, it is quite noisy, indicating much variance. Thus, the used calibration dataset (even thoug 4 times larger than the training data) is too small in this case.</li>
 </ul>
 <p>For a further discussion and more extensive experiments, please refer to <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/icml2005_Niculescu-MizilC05.pdf">Niculescu-Mizil and Caruana</a>.</p>
-</div></p></div>
+</div></p>
+<p>This post was written as an IPython notebook. You can <a href="../notebooks/reliability_diagram.ipynb">download</a> this notebook.</p></div>
     <footer>
 <p class="meta">
   <span class="byline author vcard">
