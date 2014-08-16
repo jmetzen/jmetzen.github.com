@@ -26,13 +26,13 @@ THEME = 'themes/pelican-octopress'
 
 # display items
 MENUITEMS = (
+    ('Home Page (work)', 'http://www.informatik.uni-bremen.de/~jhm/'),
     ('Archives', '/archives.html'),
-    ('Home Page (work)', 'http://www.informatik.uni-bremen.de/~jhm/')
 )
-DISPLAY_PAGES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = True
 FOOTER_MESSAGE = u'This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">CC BY-SA</a>.'
 
-#STATIC_PATHS = ()
+STATIC_PATHS =  (['images', 'notebooks'])
 FILES_TO_COPY = (
     ('extra/README', 'README'),
     ('extra/LICENSE', 'LICENSE'),
