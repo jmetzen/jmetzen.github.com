@@ -13,6 +13,7 @@ SITEURL = 'http://localhost:8000'
 FEED_DOMAIN = SITEURL
 #FEED_ATOM = 'feeds/all.atom.xml'
 FEED_RSS = 'feeds/all.rss'
+TAG_FEED_RSS = 'feeds/%s.rss'
 TIMEZONE = 'Europe/Berlin'
 DEFAULT_LANG = u'en'
 DATE_FORMATS = {
