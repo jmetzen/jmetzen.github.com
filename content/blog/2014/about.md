@@ -1,6 +1,6 @@
 Title: About  
 Date: 2013-08-16 16:07  
-Tags: meta, github, writing, python  
+Tags: meta, github, writing
 Slug: 2013-08-16/hello-world  
 Author: Jan Hendrik Metzen  
 Summary: About this blog 
