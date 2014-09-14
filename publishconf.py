@@ -6,7 +6,7 @@ sys.path.append('.')
 from pelicanconf import *
 
 
-SITEURL = 'http://jmetzen.github.io'
+SITEURL = 'https://jmetzen.github.io'
 FEED_DOMAIN = SITEURL
 
 #PLUGINS.append('gist_comments')
