@@ -34,16 +34,23 @@ DISPLAY_PAGES_ON_MENU = True
 FOOTER_MESSAGE = u'This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">CC BY-SA</a>.'
 
 STATIC_PATHS =  (['images', 'notebooks'])
-FILES_TO_COPY = (
-    ('extra/README', 'README'),
-    ('extra/LICENSE', 'LICENSE'),
-    ('extra/humans.txt', 'humans.txt'),
-    ('extra/favicon.ico', 'favicon.ico'),
-    ('extra/404.html', '404.html'),
-)
+EXTRA_PATH_METADATA = {
+    'extra/README': {'path': 'README'},
+    'extra/LICENSE': {'path': 'LICENSE'},
+    #'extra/humans.txt': {'path': 'humans.txt'},
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+    #'extra/404.html': {'path': '404.html'},
+    }
+#FILES_TO_COPY = (
+#    ('extra/README', 'README'),
+#    ('extra/LICENSE', 'LICENSE'),
+#    ('extra/humans.txt', 'humans.txt'),
+#    ('extra/favicon.ico', 'favicon.ico'),
+#    ('extra/404.html', '404.html'),
+#)
 
 # Plugins and their settings.
-PLUGIN_PATH = 'pelican-plugins'
+PLUGIN_PATHS = ['pelican-plugins']
 PLUGINS = [#'summary', #'sitemap',
            'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.youtube', 'liquid_tags.include_code',
