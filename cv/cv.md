@@ -5,12 +5,16 @@ firstname: Jan Hendrik
 lastname: Metzen
 photo: images/picture.jpg
 contact: http://www.informatik.uni-bremen.de/~jhm/
-homepage: https://jmetzen.github.io/
-email: janmetzen@mailbox.org
-mobile: '+49 (172) 7563092'
-phone: '+49 (4221) 4901481'
+homepage: http://www.informatik.uni-bremen.de/~jhm/
+email: jhm@informatik.uni-bremen.de
+# mobile: '+49 (172) 7563092'
+# phone: '+49 (4221) 4901481'
+# address:
+#  city: 27749 Delmenhorst
+#  country: Germany
+phone: +49-(421)-218-45-4123
 address:
-  city: 27749 Delmenhorst
+  city: DFKI RIC Building, Room A3.13, Robert-Hooke-Str. 1, 28359 Bremen
   country: Germany
 settings:
   protect-email: true
@@ -24,26 +28,31 @@ footer: |
 Research
 --------
 
+Reinforcement Learning
+:     Working on developing new means for skill discovery and learning of motor primitives and combining those in a Hierarchical Reinforment Learning approach. Developed the graph-based skill discovery method [OGAHC](http://www.informatik.uni-bremen.de/~jhm/publications/b2hd-MetzenEWRL2012OGAHC.html). Furthermore, we are developing an integrated experimental platform, the [Maja Machine Learning Framework (MMLF)](http://mmlf.sourceforge.net/), which simplifies empirical evaluations in Reinforcement Learning. This work is part of the [BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html) project. [Relevant publications](http://www.informatik.uni-bremen.de/~jhm/publications/class_rescat.html#Reinforcement%20Learning)
+
 BCIs
-:    **Brain Computer Interface**: We use supervised machine learning techniques to detect event-related potentials (ERPs) in a human's electroencephalogram (EEG) that indicate that the human has perceived and recognized important messages that have been presented to him or that he intends to execute a movement shortly. My work in the VI-Bot and IMMI project was focused mainly on investigating how the system can detect these ERPs with a minimum amount of labeled training data from the current user by reusing data from historic sessions of the same and other users.
+:    **Brain Computer Interface**: We use supervised machine learning techniques to detect event-related potentials (ERPs) in a human's electroencephalogram (EEG) that indicate that the human has perceived and recognized important messages that have been presented to him or that he intends to execute a movement shortly. My work in the VI-Bot and IMMI project was focused mainly on investigating how the system can detect these ERPs with a minimum amount of labeled training data from the current user by reusing data from historic sessions of the same and other users. [Relevant publications](http://www.informatik.uni-bremen.de/~jhm/publications/class_rescat.html#Brain%20Computer%20Interface)
+
+See also my [Google Scholar page](http://scholar.google.com/citations?user=w047VfEAAAAJ&hl=en)
 
 
 Positions
 ---------
 
-2014 - present
+2014 - 
 :    Project leader ["CASCADE: Cognitive AutonomouS CAtheters operating in Dynamic Environments"](http://robotik.dfki-bremen.de/en/research/projects/cascade.html), \
      Robotics Research Group, University Bremen
 
-2013 - present
+2013 -
 :    Team leader ["Sustained Learning"](http://robotik.dfki-bremen.de/en/research/teams.html#c1585), \
      Robotics Innovation Center, German Research Center for Artificial Intelligence (DFKI RIC, Bremen)
 
-2008 - present
+2008 -
 :    Organizer of workgroup "Machine Learning and Optimization" \
      Robotics Research Group, University Bremen
 
-2009 - present
+2009 -
 :    Research assistant \
      Robotics Research Group, University of Bremen
 
@@ -75,6 +84,10 @@ Awards and Grants
 2004 - 2006
 :     **Scholarship** of "Studienstiftung des Deutschen Volkes" (German National Academic Foundation)
 
+
+Publications
+-------------
+You can find a list of my publications on my [official website](http://www.informatik.uni-bremen.de/~jhm/publications/class_type.html)
 
 Teaching
 ----------
