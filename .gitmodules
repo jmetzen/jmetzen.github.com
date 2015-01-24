@@ -1,0 +1,3 @@
+[submodule "pandoc-moderncv"]
+	path = pandoc-moderncv
+	url = https://github.com/barraq/pandoc-moderncv.git
