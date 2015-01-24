@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jan Hendrik Metzen</title><link>https://jmetzen.github.io/</link><description>My personal blog on python and machine learning</description><atom:link href="https://jmetzen.github.io/feeds/all.rss" rel="self"></atom:link><lastBuildDate>Sun, 14 Sep 2014 11:18:00 +0200</lastBuildDate><item><title>Unsupervised feature learning with Sparse Filtering</title><link>https://jmetzen.github.io/2014-09-14/sparse_filtering.html</link><description>&lt;p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jan Hendrik Metzen</title><link>https://jmetzen.github.io/</link><description>My personal blog on python and machine learning</description><atom:link href="https://jmetzen.github.io/feeds/jan-hendrik-metzen.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 14 Sep 2014 11:18:00 +0200</lastBuildDate><item><title>Unsupervised feature learning with Sparse Filtering</title><link>https://jmetzen.github.io/2014-09-14/sparse_filtering.html</link><description>&lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;

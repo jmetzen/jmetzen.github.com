@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jan Hendrik Metzen</title><link href="https://jmetzen.github.io/" rel="alternate"></link><link href="https://jmetzen.github.io/feeds/2014.atom.xml" rel="self"></link><id>https://jmetzen.github.io/</id><updated>2014-09-14T11:18:00+02:00</updated><entry><title>Unsupervised feature learning with Sparse Filtering</title><link href="https://jmetzen.github.io/2014-09-14/sparse_filtering.html" rel="alternate"></link><updated>2014-09-14T11:18:00+02:00</updated><author><name>Jan Hendrik Metzen</name></author><id>tag:https://jmetzen.github.io,2014-09-14:2014-09-14/sparse_filtering.html</id><summary type="html">&lt;p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jan Hendrik Metzen</title><link href="https://jmetzen.github.io/" rel="alternate"></link><link href="https://jmetzen.github.io/feeds/2014.atom.xml" rel="self"></link><id>https://jmetzen.github.io/</id><updated>2014-09-14T11:18:00+02:00</updated><entry><title>Unsupervised feature learning with Sparse Filtering</title><link href="https://jmetzen.github.io/2014-09-14/sparse_filtering.html" rel="alternate"></link><updated>2014-09-14T11:18:00+02:00</updated><author><name>Jan Hendrik Metzen</name></author><id>tag:jmetzen.github.io,2014-09-14:2014-09-14/sparse_filtering.html</id><summary type="html">&lt;p&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;An illustration of unsupervised learning of features for images from the Olivetti faces dataset using the sparse filtering algorithm. This work is based on the paper &amp;quot;Sparse Filtering&amp;quot; by the authors Jiquan Ngiam, Pang Wei Koh, Zhenghao Chen, Sonia Bhaskar, and Andrew Y. Ng published in NIPS 2011.&lt;/p&gt;
 &lt;p&gt;The sparse filtering algorithm does not try to model the data's distribution but rather to learn features which are sparsely activated, in the sense that&lt;/p&gt;
@@ -12,11 +16,14 @@
 &lt;p&gt;This notebook illustrates the algorithm on the Olivetti faces dataset.&lt;/p&gt;
 &lt;p&gt;The source code of the sparse-filtering implementation is avalaible at https://github.com/jmetzen/sparse-filtering&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[2]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pylab&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
@@ -26,35 +33,51 @@ In&amp;nbsp;[2]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[3]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# Install with &amp;quot;pip install sparse_filtering&amp;quot;&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sparse_filtering&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;SparseFiltering&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Prepare-dataset"&gt;Prepare dataset&lt;a class="anchor-link" href="#Prepare-dataset"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;This will load the Olivetti faces dataset, normalize the examples (global and local centering), and convert each example into a 2D structure (64*64 pixel image). Thereupon, 25 patches of size 16x16pixels are extracted randomly from each image.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[4]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.datasets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;fetch_olivetti_faces&lt;/span&gt;
 &lt;span class="n"&gt;dataset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;fetch_olivetti_faces&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;shuffle&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -75,16 +98,17 @@ In&amp;nbsp;[4]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAAELCAYAAAD0hRwhAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsvXmUXNldJvi9iFwid22lpbSkMiWlUkrtm1ewMYWhmz5g
 M7TZ3Liwu6fnMNVt3NM0mGHADc20DWemAQ/thjZgA2caQ9N4aLrBuMBuvFZpKUmZ2kvKVEqlKtlV
@@ -879,20 +903,22 @@ OO5/BOA+gAX0GvzfQm+W/kN8865KP0CPVjiNHhh+hp4L4lqk5yh63OZp9NzKfn/5/7UqG6C3HQAH
 77VIxx70yuM0em6QbKtrVSbH0dOgpwD8b+hNHK5l/bTSSiuttNJKK6200korrbTSSiuttNJKK620
 0korrbTSSiuttNJKK6200korrbTSSiuttNJKK6200korrbTSSisA8P8BMVpEAXGH9vYAAAAASUVO
 RK5CYII=
-"&gt;
+"
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[5]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# Extract 25 16x16 patches randomly from each image&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.feature_extraction.image&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;extract_patches_2d&lt;/span&gt;
@@ -905,14 +931,16 @@ In&amp;nbsp;[5]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[6]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# Show 25 exemplary patches&lt;/span&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -925,16 +953,17 @@ In&amp;nbsp;[6]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcwAAAH6CAYAAACK+Hw2AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsvXuwbV1WHzT28+yzz+ve+93v6weFiY+KRou2EIyPCCG2
 BVKldncwNvgoiGLwAaYStTRqtE2oBKPGRyyjqTYhhY8EJSUChUgAWxAlITSEThSttiNFf03Tr+9+
@@ -2575,27 +2604,41 @@ h0xf9OmkKTHm/kPH+BQYI4NDnzEzFI9GmBUVFf9/eG2GX8V/D69VBvtCsl+/fPny9z9Sk1eOA7an
 +jqyqK8fPnw4apsjjv8ngPDXx48fR93n169f8e3bN3wc0+Zf5/P53xFPGb3/Jcxms866yIEY1d6f
 P39+lTrl8fEx2raNtm3/aD0Qbl6tVvhqtE759OnTq2zzV4yxbV5RUVFRUVFRUVFRUVFRUVFRUVFR
 UVFRUVFRUVFRUVFRUVFRUVFRUVFRUfEvwf8ADVDd9ez276gAAAAASUVORK5CYII=
-"&gt;
+"
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Train-Sparse-Filtering-estimator"&gt;Train Sparse Filtering estimator&lt;a class="anchor-link" href="#Train-Sparse-Filtering-estimator"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;The Sparse Filtering estimator is trained on entires dataset and 64 features extractors are learned. Note that this is computationally expensive and might take several minutes. After training, the corresponding features are extracted for the whole dataset.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[7]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;n_features&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;64&lt;/span&gt;   &lt;span class="c"&gt;# How many features are learned&lt;/span&gt;
 &lt;span class="n"&gt;estimator&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SparseFiltering&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n_features&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;n_features&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
@@ -2606,17 +2649,25 @@ In&amp;nbsp;[7]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;The following graphic illustrates the learned feature detectors. Note that most of these correspond to Gabor-like edge detectors, while some seem to correspond to noise. The latter is potentially either because L-BFGS was stopped before convergence or because the number of features (64) was chosen too large.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[8]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;estimator&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;w_&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]):&lt;/span&gt;
@@ -2631,16 +2682,17 @@ In&amp;nbsp;[8]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA04AAALICAYAAABIPqDwAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsvXm4ZWdZ5n2vMw81V6VSlalSGQghBBMgzENIgoIjtN2o
 NI00yqeftgNqa7fa0HYrH36K0u3XDoByGgE/ERFsERATCBJDBjAhkBACSQgZKklNZ6hzTp1p9R/v
@@ -3959,24 +4011,32 @@ EvKeQi5h3E9WqtyoFAAAwD/ixQkAAGANL04AAABrVHOclov70+uvP/3kXo5wfnhK2aR6JjjVezZa
 l8X/jbRNf8a8bmTslfvItDF183SxxflvxC7mtD43JEtx+XuxWjyebxir1LYhb/A2la2uadVxOyrN
 a+kuyJjbM2f+uzsuxOmq/MA+c2mVvm2ey2Wr+7VdrHOdeWOqtP9La82256vRdt32vWXl582KFQAA
 AAAAAAAAAAAAAAAAAAAAAAD8gk8a6OI+UAQELAAAAABJRU5ErkJggg==
-"&gt;
+"
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="activation-histogram"&gt;Activation histogram&lt;/h1&gt;
 &lt;p&gt;We check if the learned feature extractors have the desired sparsity properties:&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[9]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;features&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;flat&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;bins&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Activation&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -3985,16 +4045,17 @@ In&amp;nbsp;[9]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZ4AAAEdCAYAAAA8WAF5AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xt8VNW99/FPBIkRuYgodwUhVrB4o4oFilijovQAPbVe
 eorYkp4Wzqn0Zg+0zxGtr1I4PtXaizwelWuVYqtVtJRivKcVUSMaBcpFIYABFZR4RdA8f/zWdu3M
@@ -4197,23 +4258,31 @@ Q8dKnCr4D8AFwHewprbAEdjggb1YP8/shP12A8fXU+elWLNd0MdzDbCk3rMUEZGc8VfghhTlX8Xu
 IvoCf8ZGtL2BjSYDSzgPYs1ar7uyVIMCyrDBCseEyjoC92F9QK8Ck7A7qiDZDMIGG7yFjaiDun08
 hcDNrn6vuTqFR7VVJdQhvK+IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiEiO+f9PBhYb
 W0DhrQAAAABJRU5ErkJggg==
-"&gt;
+"
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;The graphic confirms that features have small activation typically.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[10]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;activated_features&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;features&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;activated_features&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -4223,16 +4292,17 @@ In&amp;nbsp;[10]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYgAAAEdCAYAAAAW6PDWAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3X2cFXXd//EXoFjcrTcoQnq427SyFdwS9cob0m0xrq6s
 ruqXGkZ1VZfb/Y1dGl2ClWbxq+zWbgxJc+1XmpWFqWtBbEEoy+KKprCAqNx4A7J4i8L+/vh8h+/s
@@ -4416,23 +4486,31 @@ tOCvsHmKrqWJcFtWuPaOxWrVgauwP84nsc7wtrz5vouVHra7afN9Ekuy67E6/Q1YzTpYf348enLZ
 b3ffcVQM8nX3vRPx/0LL+x22p/0rbFttw0qHYOcQfodd2bQdSxTXYHvt12Hlp8ewI7RlRdZZ7Hvt
 xGJ0B3bSeS1dL5IIpt2DHS1MxbafJ7DPP8q9P8O1ZxdWBn0flshERCSjCl1yLj2gIwgREYmkBCEi
 IiIiIiIiIiIiIiIiIiIiIiIiIiIiIlnx/wFTTYzz7vr92AAAAABJRU5ErkJggg==
-"&gt;
+"
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;&lt;strong&gt;Lifetime Sparsity&lt;/strong&gt;: The figure confirms that each feature is only active (i.e., has an activation above 0.1) for a small ratio of the examples (approx. 25%)&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[11]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;activated_features&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;features&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hist&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;activated_features&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;bins&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -4442,16 +4520,17 @@ In&amp;nbsp;[11]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZIAAAEdCAYAAAAmZOH3AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xu8FXW9//EXKJgIQqYiCFtQvGEIYql5SbIdInXCLsc7
 aVm/Oruj1TlZaucIppnGybR8RBctzCOk6cm00HSbpjs1VARRQoXYIXcvyCVFFPbvj893uWYv1mX2
@@ -4645,23 +4724,31 @@ VqxWfjp2hljG41gi+QFWJnqQ7MbrWuyEglexJJrPLGwjfT+da/HXYh3L92J9TI9iG/1Cou3fhCW7
 TB05w8Wejyq0/HbA+nuuxH4kaTFwcRjXC/ucdsbW1Uewn64tFmu+NuQO/w4rWz6FJdkbItNlpt1I
 8WUmIiLdVPTkCqkBHZGIiEhZlEhExJta3d1AREREREREREREREREREREREREREREJG3+P+FOkawt
 IWLcAAAAAElFTkSuQmCC
-"&gt;
+"
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;&lt;strong&gt;Population Sparsity&lt;/strong&gt;: Each example activates only few features (approx. 25-30% of the features)&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[12]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hist&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;features&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xlabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Mean Squared Feature Activation&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -4670,16 +4757,17 @@ In&amp;nbsp;[12]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYsAAAEdCAYAAAD930vVAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3XmcHHWd//FXyAGEhElACITQZCTLcjgbGCESRYg6jCG6
 6v48VtRA1HXVcb1WoxyuAVcUN9760F2PACqD6624rMC4oIwEAgwJLXKYQxJycmbIAcEkvz8+1ema
@@ -4859,30 +4947,50 @@ z3mwefwJ+AI2qL8BKxS9sfv+FjtCagPllsmXsAHbjcAV2EpxuM+x0nnYDwRtiv1tBP4zum4LNuj9
 99hex4OUx0d+HP37GANbf/E8S6LHOJKBY1pJ76+vYAcCPB7dttL7sb2UlVir9Wps2ZTmP9h7VUT2
 EQsI88UuEUmJ9iwkC42Oi4hIylQsJAuDtbRERERERERERERERERERERERERERERERLLy/wHC9bRO
 cj7ccwAAAABJRU5ErkJggg==
-"&gt;
+"
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;&lt;strong&gt;High Dispersal&lt;/strong&gt;: All features have similar statistics; no one feature has significantly more “activity” than the other features. This is checked by plotting the mean squared activations of each feature obtained by averaging the squared values in the feature matrix across the examples.&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Learn-a-Second-Layer"&gt;Learn a Second Layer&lt;a class="anchor-link" href="#Learn-a-Second-Layer"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Learning a second layer of features using greedy layer-wise stacking on the features produced by the first layer.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[13]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;n_features2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;   &lt;span class="c"&gt;# How many features are learned&lt;/span&gt;
 &lt;span class="n"&gt;estimator2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;SparseFiltering&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n_features&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;n_features2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
@@ -4893,14 +5001,16 @@ In&amp;nbsp;[13]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[14]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n_features2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -4917,16 +5027,17 @@ In&amp;nbsp;[14]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAjwAAAFdCAYAAAAHT7f4AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsvVmMa1l2JbYvySAZc7x483s51suhsrKyhs6aVCUps5Rl
 oe2WJwiCGoIF2zD0YQP9Lxs25A//ugG3f/zR9of7y3bDQAOW224gU0pNqSqVulRDzpVT5fDmIeYg
@@ -5724,22 +5835,39 @@ E/ad49lvnztAOwfhoBbsC5ljM3u8jhi2nc9d/ub8Pm3MXftDmWM5PHbAz+1VJTzm7hTpy73H7OOZ
 Y4PyMC4NeH+/Pt9zXgzdl8++cOGQ43VQO4AHBry/X4VwM16GH6/fmNM2FrYtMBi0Hu27tpUZr/vO
 y8MiNx73GuO5dSiLgn05CIfdH4qVvXiP1x7GQffL4nulSIm+fH88EzgcDofD4XA4HA6Hw+FwOBwO
 h8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDoejD/8PpBd2en0k3/AAAAAASUVORK5CYII=
-"&gt;
+"
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Each column of the graphic shows the top-6 layer-1 feature extractors used within one of the 10 layer-2 features. According to the paper, this &amp;quot;discovers meaningful features that pool the first layer features&amp;quot;. This, however, is only partially reproducable on the Olivetti dataset.&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Discussion"&gt;Discussion&lt;a class="anchor-link" href="#Discussion"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;In summary&lt;/p&gt;
 &lt;ul&gt;
@@ -5749,33 +5877,42 @@ h8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDoejD/8PpBd2en0k3/AAAAAASUVORK5CYII=
 &lt;li&gt;the only parameter requiring tuning is the number of features per layer&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We will analyse the quality of the learned features in a predictive setting in a follow-up post.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;
-&lt;p&gt;This post was written as an IPython notebook. You can &lt;a href="../notebooks/sparse_filtering.ipynb"&gt;download&lt;/a&gt; this notebook.&lt;/p&gt;</summary><category term="python"></category><category term="unsupervised"></category><category term="feature learning"></category><category term="machine-learning"></category></entry><entry><title>Compare Classifier Predictions using Reliability Diagrams</title><link href="https://jmetzen.github.io/2014-08-16/reliability-diagram.html" rel="alternate"></link><updated>2014-08-16T16:08:00+02:00</updated><author><name>Jan Hendrik Metzen</name></author><id>tag:https://jmetzen.github.io,2014-08-16:2014-08-16/reliability-diagram.html</id><summary type="html">&lt;p&gt;
+&lt;p&gt;This post was written as an IPython notebook. You can &lt;a href="../notebooks/sparse_filtering.ipynb"&gt;download&lt;/a&gt; this notebook.&lt;/p&gt;</summary><category term="python"></category><category term="unsupervised"></category><category term="feature learning"></category><category term="machine-learning"></category></entry><entry><title>Compare Classifier Predictions using Reliability Diagrams</title><link href="https://jmetzen.github.io/2014-08-16/reliability-diagram.html" rel="alternate"></link><updated>2014-08-16T16:08:00+02:00</updated><author><name>Jan Hendrik Metzen</name></author><id>tag:jmetzen.github.io,2014-08-16:2014-08-16/reliability-diagram.html</id><summary type="html">&lt;p&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;This notebook generates &lt;strong&gt;reliability diagrams&lt;/strong&gt; for some classifiers on an artificial data set. Reliability diagrams allow checking if the predicted probabilities of a binary classifier are well calibrated. For perfectly calibrated predictions, the curve in a reliability diagram should be as close as possible to the diagonal/identity. This would correspond to a situation in which among &lt;span class="math"&gt;\(N\)&lt;/span&gt; instances for which a classifier predicts probability &lt;span class="math"&gt;\(p\)&lt;/span&gt; for class &lt;span class="math"&gt;\(A\)&lt;/span&gt;, the ratio of instances which actually belong to class &lt;span class="math"&gt;\(A\)&lt;/span&gt; is approx. &lt;span class="math"&gt;\(p\)&lt;/span&gt; (for any &lt;span class="math"&gt;\(p\)&lt;/span&gt; and sufficiently large &lt;span class="math"&gt;\(N\)&lt;/span&gt;).&lt;/p&gt;
 &lt;p&gt;This notebook reproduces some of the results from the paper &lt;a href="http://machinelearning.wustl.edu/mlpapers/paper_files/icml2005_Niculescu-MizilC05.pdf"&gt;Predicting Good Probabilities with Supervised Learning&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[1]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;load_ext&lt;/span&gt; &lt;span class="n"&gt;watermark&lt;/span&gt;
 &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;watermark&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Jan Hendrik Metzen&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;scikit&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;learn&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 &lt;div class="box-flex1 output_subarea output_stream output_stdout"&gt;
-&lt;pre&gt;
-Jan Hendrik Metzen 16/08/2014 
+&lt;pre class="ipynb"&gt;Jan Hendrik Metzen 16/08/2014 
 
 CPython 2.7.7
 IPython 2.1.0
@@ -5790,7 +5927,6 @@ machine    : x86_64
 processor  : x86_64
 CPU cores  : 4
 interpreter: 64bit
-
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -5799,11 +5935,12 @@ interpreter: 64bit
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[2]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
 &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -5818,32 +5955,42 @@ In&amp;nbsp;[2]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[3]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
 &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; &lt;span class="n"&gt;inline&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Function-for-reliability-curve-computation"&gt;Function for reliability curve computation&lt;a class="anchor-link" href="#Function-for-reliability-curve-computation"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[4]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;reliability_curve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y_true&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_score&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;bins&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;normalize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Compute reliability curve&lt;/span&gt;
@@ -5917,35 +6064,51 @@ In&amp;nbsp;[4]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Training-data"&gt;Training data&lt;a class="anchor-link" href="#Training-data"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Generate a &lt;em&gt;toy dataset&lt;/em&gt; on which different classifiers are compared. Among the 20 features, only 2 are actually informative. 2 further features are redundant, i.e., linear combinations of the 2 informative features. The remaining features are just noise.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[5]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;datasets&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;make_classification&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n_samples&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_features&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
                                     &lt;span class="n"&gt;n_informative&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_redundant&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[6]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;bins&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;25&lt;/span&gt;
 &lt;span class="n"&gt;train_samples&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;  &lt;span class="c"&gt;# Samples used for training the models&lt;/span&gt;
@@ -5960,21 +6123,35 @@ In&amp;nbsp;[6]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Compute-reliability-curves-for-different-classifiers"&gt;Compute reliability curves for different classifiers&lt;a class="anchor-link" href="#Compute-reliability-curves-for-different-classifiers"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Compute reliability curves for different classifiers: * Logistic Regression * Naive Bayes * Random Forest * Support-Vector Classification (scores) * Support-Vector Classification + Isotonoc Calibration&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[7]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;classifiers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Logistic regression&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;LogisticRegression&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;
                &lt;span class="s"&gt;&amp;quot;Naive Bayes&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;GaussianNB&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;
@@ -5984,14 +6161,16 @@ In&amp;nbsp;[7]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;reliability_scores&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
 &lt;span class="n"&gt;y_score&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
@@ -6024,18 +6203,26 @@ In&amp;nbsp;[]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h3 id="Plot-reliability-diagram"&gt;Plot reliability diagram&lt;a class="anchor-link" href="#Plot-reliability-diagram"&gt;&amp;#182;&lt;/a&gt;&lt;/h3&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div class="cell border-box-sizing code_cell vbox"&gt;
-&lt;div class="input hbox"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;
 In&amp;nbsp;[9]:
 &lt;/div&gt;
+
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subplot2grid&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;rowspan&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -6058,28 +6245,25 @@ In&amp;nbsp;[9]:
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
+
 &lt;/div&gt;
 
-&lt;div class="vbox output_wrapper"&gt;
-&lt;div class="output vbox"&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
 
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt output_prompt"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;
     Out[9]:&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_pyout"&gt;
 
 
-&lt;pre&gt;
-&amp;lt;matplotlib.legend.Legend at 0x7f8e75ee1890&amp;gt;
-&lt;/pre&gt;
+&lt;pre class="ipynb"&gt;&amp;lt;matplotlib.legend.Legend at 0x7f8e75ee1890&amp;gt;&lt;/pre&gt;
 
 &lt;/div&gt;
-&lt;/div&gt;
 
-&lt;div class="hbox output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="box-flex1 output_subarea output_display_data"&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt"&gt;&lt;/div&gt;
 
 
+&lt;div class="output_png output_subarea "&gt;
 &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAggAAAHxCAYAAAAIiUQvAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsnXlYVVXbh+8zMQ8qqCCToIg5AeKACg6I85QDTqXWW5lm
 g+VQTg3Wm8NrqVgOaWmm5keKY6ZpWopKDpjhiEIKHCY5IDOcaX9/HD05oIIcQHTf18UFe5+113r2
@@ -7350,15 +7534,20 @@ kSWSQ+71vRlZr0b4EGLEf4vkTLjF7Xc4Qc4LwNvAEUQfj7tti5EAzGrEoXizy30dxHg/hzhLaYhB
 762PXfMnPIbMGNQhywogTsxqJJZhtZcHVRRFURTl0uBRdPZAURRFUZQECpAdFl8c6I4oiqIoijI4
 uB/ZFvrUQHdEURRFURRFURRFURRFURRFURRFURRFURRFURRFURRFURRFURRFUS4u/h+rx2/QTXBL
 ZgAAAABJRU5ErkJggg==
-"&gt;
+"
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
 
 &lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;The following observations can be made:&lt;/p&gt;
 &lt;ul&gt;
@@ -7369,6 +7558,7 @@ ZgAAAABJRU5ErkJggg==
 &lt;li&gt;One alternative to Platt-calibration is Isotonic Regression. While Platt-calibration fits a sigmoid, Isotonic Regression fits an arbitrary increasing (isotonic) function. Thus, it has a weaker inducttive bias and can be applied more broadly (also in situations where the calibration curve is not sigmoid). The downside is that it typically requires more calibration data because its inductive bias is weaker. This can also be seen in the &lt;strong&gt;SVC + IR&lt;/strong&gt; curve: While the sigmoid shape of the pure SVC scores is removed and the calibration curve does not show a clear bias, it is quite noisy, indicating much variance. Thus, the used calibration dataset (even thoug 4 times larger than the training data) is too small in this case.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For a further discussion and more extensive experiments, please refer to &lt;a href="http://machinelearning.wustl.edu/mlpapers/paper_files/icml2005_Niculescu-MizilC05.pdf"&gt;Niculescu-Mizil and Caruana&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;
-&lt;p&gt;This post was written as an IPython notebook. You can &lt;a href="../notebooks/reliability_diagram.ipynb"&gt;download&lt;/a&gt; this notebook.&lt;/p&gt;</summary><category term="python"></category><category term="classification"></category><category term="machine-learning"></category></entry><entry><title>About</title><link href="https://jmetzen.github.io/2013-08-16/hello-world.html" rel="alternate"></link><updated>2013-08-16T16:07:00+02:00</updated><author><name>Jan Hendrik Metzen</name></author><id>tag:https://jmetzen.github.io,2013-08-16:2013-08-16/hello-world.html</id><summary type="html">&lt;h3&gt;The technology behind this site&lt;/h3&gt;
-&lt;p&gt;This site is powered by &lt;a href="http://blog.getpelican.com/"&gt;Pelican&lt;/a&gt; -- a static website generator  -- and is &lt;a href="https://github.com/kfr2/kfr2.github.com"&gt;based on the GitHub page of Kevin Richardson&lt;/a&gt; using &lt;a href="http://pages.github.com/"&gt;GitHub pages&lt;/a&gt;.  Content is written in &lt;a href="http://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt;, a lightweight markup language that allows one to easily add syntax like headings, anchors, and lists to a page. &lt;/p&gt;</summary><category term="meta"></category><category term="github"></category><category term="writing"></category></entry></feed>
+&lt;p&gt;This post was written as an IPython notebook. You can &lt;a href="../notebooks/reliability_diagram.ipynb"&gt;download&lt;/a&gt; this notebook.&lt;/p&gt;</summary><category term="python"></category><category term="classification"></category><category term="machine-learning"></category></entry></feed>

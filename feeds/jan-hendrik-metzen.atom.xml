@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jan Hendrik Metzen</title><link>https://jmetzen.github.io/</link><description>My personal blog on python and machine learning</description><atom:link href="https://jmetzen.github.io/feeds/all.rss" rel="self"></atom:link><lastBuildDate>Sun, 14 Sep 2014 11:18:00 +0200</lastBuildDate><item><title>Unsupervised feature learning with Sparse Filtering</title><link>https://jmetzen.github.io/2014-09-14/sparse_filtering.html</link><description>&lt;p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jan Hendrik Metzen</title><link href="https://jmetzen.github.io/" rel="alternate"></link><link href="https://jmetzen.github.io/feeds/jan-hendrik-metzen.atom.xml" rel="self"></link><id>https://jmetzen.github.io/</id><updated>2014-09-14T11:18:00+02:00</updated><entry><title>Unsupervised feature learning with Sparse Filtering</title><link href="https://jmetzen.github.io/2014-09-14/sparse_filtering.html" rel="alternate"></link><updated>2014-09-14T11:18:00+02:00</updated><author><name>Jan Hendrik Metzen</name></author><id>tag:jmetzen.github.io,2014-09-14:2014-09-14/sparse_filtering.html</id><summary type="html">&lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
@@ -5880,7 +5880,7 @@ h8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDoejD/8PpBd2en0k3/AAAAAASUVORK5CYII=
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;
-&lt;p&gt;This post was written as an IPython notebook. You can &lt;a href="../notebooks/sparse_filtering.ipynb"&gt;download&lt;/a&gt; this notebook.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jan Hendrik Metzen</dc:creator><pubDate>Sun, 14 Sep 2014 11:18:00 +0200</pubDate><guid>tag:jmetzen.github.io,2014-09-14:2014-09-14/sparse_filtering.html</guid><category>python</category><category>unsupervised</category><category>feature learning</category><category>machine-learning</category></item><item><title>Compare Classifier Predictions using Reliability Diagrams</title><link>https://jmetzen.github.io/2014-08-16/reliability-diagram.html</link><description>&lt;p&gt;
+&lt;p&gt;This post was written as an IPython notebook. You can &lt;a href="../notebooks/sparse_filtering.ipynb"&gt;download&lt;/a&gt; this notebook.&lt;/p&gt;</summary><category term="python"></category><category term="unsupervised"></category><category term="feature learning"></category><category term="machine-learning"></category></entry><entry><title>Compare Classifier Predictions using Reliability Diagrams</title><link href="https://jmetzen.github.io/2014-08-16/reliability-diagram.html" rel="alternate"></link><updated>2014-08-16T16:08:00+02:00</updated><author><name>Jan Hendrik Metzen</name></author><id>tag:jmetzen.github.io,2014-08-16:2014-08-16/reliability-diagram.html</id><summary type="html">&lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
@@ -7561,4 +7561,4 @@ ZgAAAABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;
-&lt;p&gt;This post was written as an IPython notebook. You can &lt;a href="../notebooks/reliability_diagram.ipynb"&gt;download&lt;/a&gt; this notebook.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jan Hendrik Metzen</dc:creator><pubDate>Sat, 16 Aug 2014 16:08:00 +0200</pubDate><guid>tag:jmetzen.github.io,2014-08-16:2014-08-16/reliability-diagram.html</guid><category>python</category><category>classification</category><category>machine-learning</category></item></channel></rss>
+&lt;p&gt;This post was written as an IPython notebook. You can &lt;a href="../notebooks/reliability_diagram.ipynb"&gt;download&lt;/a&gt; this notebook.&lt;/p&gt;</summary><category term="python"></category><category term="classification"></category><category term="machine-learning"></category></entry></feed>
