@@ -23,6 +23,8 @@ help:
 
 
 html: clean $(OUTPUTDIR)/index.html
+	cd pandoc-moderncv && $(MAKE) html
+	cp -r pandoc-moderncv/dist output/cv
 	@echo 'Done'
 
 $(OUTPUTDIR)/%.html:

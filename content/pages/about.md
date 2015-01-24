@@ -12,15 +12,6 @@ Blog posts are mostly based on IPython notebooks.
 I am a research assistant at the robotics group of the University of Bremen and
 team leader of the team "Learning" of the Robotics Innovation Center, German Research Center for Artificial Intelligence (DFKI, Bremen). See also [my work homepage](http://www.informatik.uni-bremen.de/~jhm/).
 
-A short CV:
+You can find my CV [here](../cv/cv.html)
 
-   * 2014: Ph.D. (Dr.rer.nat.) at the University of Bremen. Thesis title: ["Learning the Structure of Continuous Markov Decision Processes"](http://www.informatik.uni-bremen.de/~jhm/publications/metzen_learning_2014.pdf)
-   * 2013 - present: Team Leader "Learning" of the Robotics Innovation Center, German Research Center for Artificial Intelligence (DFKI, Bremen)
-   * 2008 - present: Organizer of workgroup "Machine Learning and Optimization" of the Robotics Research Group, University Bremen
-   * 2009 - present: Research assistant in the Robotics Research Group, University of Bremen
-   * 2007 - 2009: Researcher at the Robotics Innovation Center, German Research Center for Artificial Intelligence (DFKI, Bremen)
-   * 2006 - 2007: Research assistant in the Robotics Research Group, University of Bremen
-   * 2006: Diploma in Computer Science
-   * 2004 - 2006: Scholarship of "Studienstiftung des Deutschen Volkes" (German National Academic Foundation)
-   * 2001 - 2006: Study of "Computer Science" at Westfaelische Wilhelms-University, Muenster, Germany
 
