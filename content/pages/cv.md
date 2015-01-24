@@ -4,7 +4,7 @@ Slug: cv
 Author: Jan Hendrik Metzen
 Summary:  Curriculum vitae
 
-<object width=800 height=600 type="text/html" data="../cv/cv.html">
-<p>backup content</p>
+<object width="100%" height=5000 type="text/html" data="../cv/cv.html">
+  <p>backup content</p>
 </object>
 
