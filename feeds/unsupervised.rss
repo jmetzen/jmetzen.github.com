@@ -5,16 +5,20 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;An illustration of unsupervised learning of features for images from the Olivetti faces dataset using the sparse filtering algorithm. This work is based on the paper &amp;quot;Sparse Filtering&amp;quot; by the authors Jiquan Ngiam, Pang Wei Koh, Zhenghao Chen, Sonia Bhaskar, and Andrew Y. Ng published in NIPS 2011.&lt;/p&gt;
-&lt;p&gt;The sparse filtering algorithm does not try to model the data's distribution but rather to learn features which are sparsely activated, in the sense that&lt;/p&gt;
+&lt;p&gt;An illustration of unsupervised learning of features for images from the Olivetti faces dataset
+using the sparse filtering algorithm. This work is based on the paper &amp;quot;Sparse Filtering&amp;quot;
+by the authors Jiquan Ngiam, Pang Wei Koh, Zhenghao Chen, Sonia Bhaskar, and Andrew Y. Ng published in NIPS 2011.&lt;/p&gt;
+&lt;p&gt;The sparse filtering algorithm does not try to model the data&amp;#39;s distribution but rather to learn features which
+are sparsely activated, in the sense that&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;for each example, only a small subset of features is activated (&amp;quot;Population Sparsity&amp;quot;)&lt;/li&gt;
 &lt;li&gt;each feature is only activated on a small subset of he examples (&amp;quot;Lifetime Sparsity&amp;quot;)&lt;/li&gt;
 &lt;li&gt;features are roughly activated equally often (&amp;quot;High Dispersal&amp;quot;)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;This sparsity is encoded as an objective function and L-BFGS is used to minimize this function.&lt;/p&gt;
+&lt;p&gt;This sparsity is encoded as an objective function and L-BFGS is used to minimize this
+function.&lt;/p&gt;
 &lt;p&gt;This notebook illustrates the algorithm on the Olivetti faces dataset.&lt;/p&gt;
-&lt;p&gt;The source code of the sparse-filtering implementation is avalaible at https://github.com/jmetzen/sparse-filtering&lt;/p&gt;
+&lt;p&gt;The source code of the sparse-filtering implementation is avalaible at &lt;a href="https://github.com/jmetzen/sparse-filtering"&gt;https://github.com/jmetzen/sparse-filtering&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -4962,7 +4966,8 @@ cj7ccwAAAABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;strong&gt;High Dispersal&lt;/strong&gt;: All features have similar statistics; no one feature has significantly more “activity” than the other features. This is checked by plotting the mean squared activations of each feature obtained by averaging the squared values in the feature matrix across the examples.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;High Dispersal&lt;/strong&gt;: All features have similar statistics; no one feature has significantly more “activity” than the other features. This is checked by plotting the mean squared activations of each feature obtained by averaging
+the squared values in the feature matrix across the examples.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -5871,12 +5876,13 @@ h8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDoejD/8PpBd2en0k3/AAAAAASUVORK5CYII=
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;In summary&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;sparse filtering is a unsupervsied feature learning algorithm that does not try to model the data's distribution but rather to learn features directly which are sparsely activated&lt;/li&gt;
+&lt;li&gt;sparse filtering is a unsupervsied feature learning algorithm that does not try to model the data&amp;#39;s distribution but rather to learn features directly which are sparsely activated&lt;/li&gt;
 &lt;li&gt;the learned feature extractors obey specific sparsity conditions (lifetime sparsity, population sparsity, and high dispersal)&lt;/li&gt;
 &lt;li&gt;deep archictectures can be trained using greedy layer-wise stacking&lt;/li&gt;
-&lt;li&gt;the only parameter requiring tuning is the number of features per layer&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;the only parameter requiring tuning is the number of features per layer&lt;/p&gt;
 &lt;p&gt;We will analyse the quality of the learned features in a predictive setting in a follow-up post.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;

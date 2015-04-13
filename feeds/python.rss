@@ -29,9 +29,7 @@
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[1]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
@@ -46,9 +44,7 @@ In&amp;nbsp;[1]:
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[2]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[2]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
@@ -63,9 +59,7 @@ In&amp;nbsp;[2]:
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[3]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[3]:&lt;/div&gt;
 
 &lt;div class="collapseheader box-flex1"&gt;&lt;span style="font-weight: bold;"&gt;Expand Code&lt;/span&gt;
 &lt;div class="input_area box-flex1" style="display:none"&gt;
@@ -155,9 +149,7 @@ In&amp;nbsp;[3]:
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[4]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[4]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.datasets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;make_classification&lt;/span&gt;
@@ -185,9 +177,7 @@ In&amp;nbsp;[4]:
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[5]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[5]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -201,8 +191,7 @@ In&amp;nbsp;[5]:
 &lt;div class="output"&gt;
 
 
-&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;
-    Out[5]:&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
 
 &lt;div class="output_html rendered_html output_subarea output_pyout"&gt;
 &lt;div style="max-height:1000px;max-width:1500px;overflow:auto;"&gt;
@@ -398,9 +387,7 @@ In&amp;nbsp;[5]:
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[6]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[6]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pairplot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="nb"&gt;vars&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;14&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;hue&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;class&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -1353,9 +1340,7 @@ AElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[7]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[7]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;figsize&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -1721,9 +1706,7 @@ AAAkCYIdAABAkiDYAQAAJIn/AqZxbgCBRwhAAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[8]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[8]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;IPython.display&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Image&lt;/span&gt;
@@ -1738,8 +1721,7 @@ In&amp;nbsp;[8]:
 &lt;div class="output"&gt;
 
 
-&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;
-    Out[8]:&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[8]:&lt;/div&gt;
 
 
 &lt;div class="output_png output_subarea output_pyout"&gt;
@@ -15119,9 +15101,7 @@ height=600
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[9]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[9]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.svm&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;LinearSVC&lt;/span&gt;
@@ -15484,9 +15464,7 @@ rkJggg==
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[10]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[10]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;plot_learning_curve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LinearSVC&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;10.0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;LinearSVC(C=10.0)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -15859,9 +15837,7 @@ AOghSL3mq/vQAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[11]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[11]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;plot_learning_curve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LinearSVC&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;10.0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;LinearSVC(C=10.0) Features: 11&amp;amp;14&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -16194,9 +16170,7 @@ AElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[12]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[12]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.pipeline&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Pipeline&lt;/span&gt;
@@ -16560,9 +16534,7 @@ AAAAABDkb73CACURAJs0ANikAcAmDQA2aQCwSQOALRQTUIyTjWSdAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[13]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[13]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;plot_learning_curve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LinearSVC&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;LinearSVC(C=0.1)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
@@ -16910,9 +16882,7 @@ QoisSdIQQgiRNUkaQgghsiZJQwghRNb+P5Jf1rlMlqXGAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[14]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[14]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.grid_search&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;GridSearchCV&lt;/span&gt;
@@ -17313,9 +17283,7 @@ JA2TQSNJkiRpmAwaSZIkScP8HxpeI8xC6toNAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[15]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[15]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;plot_learning_curve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LinearSVC&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;penalty&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;l1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;dual&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; 
@@ -17641,9 +17609,7 @@ Y4yJzJKGMcaYyCxpGGOMiez/A7OWp2navWNpAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[16]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[16]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;est&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LinearSVC&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;penalty&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;l1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;dual&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -17705,9 +17671,7 @@ Non-zero coefficients: [ 5  9 11 12 17 18]
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[17]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[17]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.datasets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;make_circles&lt;/span&gt;
@@ -17721,9 +17685,7 @@ In&amp;nbsp;[17]:
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[18]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[18]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;plot_learning_curve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LinearSVC&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;0.25&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;LinearSVC(C=0.25)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
@@ -18035,9 +17997,7 @@ f8jRluc0UEZ4AAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[19]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[19]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hstack&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;])),&lt;/span&gt; 
@@ -18812,9 +18772,7 @@ RU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[20]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[20]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# add squared distance from origin as third feature&lt;/span&gt;
@@ -19063,9 +19021,7 @@ JQgREUmkBCEiIomUIEREJNH/AxO8oA3G5u/7AAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[21]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[21]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.svm&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;SVC&lt;/span&gt;
@@ -19314,16 +19270,14 @@ IiISSwlCRERi/T94UWBEp2tGNAAAAABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Back to the original dataset, but this time with many more features and datapoints and 5 classes. LinearSVC would be a bit slow on this dataset size; the cheat sheet recommends using &lt;code&gt;SGDClassifier&lt;/code&gt;. This classifier learns a linear model (just as &lt;code&gt;LinearSVC&lt;/code&gt; or logistic regression) but uses stochastic gradient descent for training (just as artificial neural networks with backpropagation do typically).&lt;/p&gt;
+&lt;p&gt;Back to the original dataset, but this time with many more features and datapoints and 5 classes. LinearSVC would be a bit slow on this dataset size; the cheat sheet recommends using &lt;code&gt;SGDClassifier&lt;/code&gt;. This classifier learns a linear model (just as &lt;code&gt;LinearSVC&lt;/code&gt; or logistic regression) but uses stochastic gradient descent for training (just as artificial neural networks with backpropagation do typically). Note that &lt;code&gt;SGDClassifier&lt;/code&gt; is sensitive to feature scaling and thus a common preprocessing on real datasets is to standardize the data with, e.g., &lt;code&gt;StandardScaler&lt;/code&gt; such that every feature has mean 0 and variance 1.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;SGDClassifier&lt;/code&gt; allows to sweep through the data in mini-batches, which is helpful when the data is too large to fit into memory. Cross-validation is not compatible with this technique; instead &lt;em&gt;progressive validation&lt;/em&gt; is used: here, the estimator is tested always on the next chunk of training data (before seeing it for training). After training, it is tested again to check how well it has adapted to the data.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[22]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[22]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;make_classification&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;200000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_features&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_informative&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;25&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
@@ -19338,9 +19292,7 @@ In&amp;nbsp;[22]:
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[23]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[23]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.linear_model&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;SGDClassifier&lt;/span&gt;
@@ -19371,8 +19323,7 @@ In&amp;nbsp;[23]:
 &lt;div class="output"&gt;
 
 
-&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;
-    Out[23]:&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[23]:&lt;/div&gt;
 
 
 &lt;pre class="ipynb"&gt;&amp;lt;matplotlib.legend.Legend at 0x7f6a24e2dfd0&amp;gt;&lt;/pre&gt;
@@ -19916,9 +19867,7 @@ KZUxDRpKKaUypkFDKaVUxv4/kyUKdoO2uUgAAAAASUVORK5CYII=
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[24]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[24]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.datasets&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;load_digits&lt;/span&gt;
@@ -21487,9 +21436,7 @@ xjSmMSUxHbymMY1pTElMB69pTGMaUxLTwWsa05jGlMT/A5t4DnaFBrLZAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[25]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[25]:&lt;/div&gt;
 
 &lt;div class="collapseheader box-flex1"&gt;&lt;span style="font-weight: bold;"&gt;Expand Code&lt;/span&gt;
 &lt;div class="input_area box-flex1" style="display:none"&gt;
@@ -21542,9 +21489,7 @@ In&amp;nbsp;[25]:
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[26]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[26]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;manifold&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;decomposition&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;random_projection&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -22994,9 +22939,7 @@ jESgHCKKITZCREREpFn/D8rOKgWj/uhVAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[27]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[27]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;X_pca&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;decomposition&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TruncatedSVD&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n_components&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit_transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -24597,9 +24540,7 @@ iwIhQgghhExaFAgRQgghZNL6/40Am125xgsLAAAAAElFTkSuQmCC
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[28]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[28]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;tsne&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;manifold&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TSNE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n_components&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;pca&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;random_state&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -26114,9 +26055,7 @@ QIiIiIjiFpfGiIjogikvL2+Vc4nsCClla98DERHFASFEIoDcKC9TIaVsiMHtEAFgIERERERx7H8B
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[29]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[29]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="c"&gt;# adapted from http://scikit-learn.org/stable/auto_examples/linear_model/plot_sgd_loss_functions.html&lt;/span&gt;
@@ -26150,8 +26089,7 @@ In&amp;nbsp;[29]:
 &lt;div class="output"&gt;
 
 
-&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;
-    Out[29]:&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[29]:&lt;/div&gt;
 
 
 &lt;pre class="ipynb"&gt;&amp;lt;matplotlib.text.Text at 0x7f6a2879cf90&amp;gt;&lt;/pre&gt;
@@ -26580,9 +26518,7 @@ D6CwZzJwZgAAAABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[30]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[30]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="n"&gt;Image&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;algorithm_types_detailed.png&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;800&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;600&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
@@ -26596,8 +26532,7 @@ In&amp;nbsp;[30]:
 &lt;div class="output"&gt;
 
 
-&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;
-    Out[30]:&lt;/div&gt;
+&lt;div class="output_area"&gt;&lt;div class="prompt output_prompt"&gt;Out[30]:&lt;/div&gt;
 
 
 &lt;div class="output_png output_subarea output_pyout"&gt;
@@ -28249,9 +28184,7 @@ height=600
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;
-In&amp;nbsp;[31]:
-&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[31]:&lt;/div&gt;
 
 &lt;div class="input_area box-flex1"&gt;
 &lt;div class="highlight-ipynb"&gt;&lt;pre class="ipynb"&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;load_ext&lt;/span&gt; &lt;span class="n"&gt;watermark&lt;/span&gt;
@@ -28297,16 +28230,20 @@ interpreter: 64bit
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;An illustration of unsupervised learning of features for images from the Olivetti faces dataset using the sparse filtering algorithm. This work is based on the paper &amp;quot;Sparse Filtering&amp;quot; by the authors Jiquan Ngiam, Pang Wei Koh, Zhenghao Chen, Sonia Bhaskar, and Andrew Y. Ng published in NIPS 2011.&lt;/p&gt;
-&lt;p&gt;The sparse filtering algorithm does not try to model the data's distribution but rather to learn features which are sparsely activated, in the sense that&lt;/p&gt;
+&lt;p&gt;An illustration of unsupervised learning of features for images from the Olivetti faces dataset
+using the sparse filtering algorithm. This work is based on the paper &amp;quot;Sparse Filtering&amp;quot;
+by the authors Jiquan Ngiam, Pang Wei Koh, Zhenghao Chen, Sonia Bhaskar, and Andrew Y. Ng published in NIPS 2011.&lt;/p&gt;
+&lt;p&gt;The sparse filtering algorithm does not try to model the data&amp;#39;s distribution but rather to learn features which
+are sparsely activated, in the sense that&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;for each example, only a small subset of features is activated (&amp;quot;Population Sparsity&amp;quot;)&lt;/li&gt;
 &lt;li&gt;each feature is only activated on a small subset of he examples (&amp;quot;Lifetime Sparsity&amp;quot;)&lt;/li&gt;
 &lt;li&gt;features are roughly activated equally often (&amp;quot;High Dispersal&amp;quot;)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;This sparsity is encoded as an objective function and L-BFGS is used to minimize this function.&lt;/p&gt;
+&lt;p&gt;This sparsity is encoded as an objective function and L-BFGS is used to minimize this
+function.&lt;/p&gt;
 &lt;p&gt;This notebook illustrates the algorithm on the Olivetti faces dataset.&lt;/p&gt;
-&lt;p&gt;The source code of the sparse-filtering implementation is avalaible at https://github.com/jmetzen/sparse-filtering&lt;/p&gt;
+&lt;p&gt;The source code of the sparse-filtering implementation is avalaible at &lt;a href="https://github.com/jmetzen/sparse-filtering"&gt;https://github.com/jmetzen/sparse-filtering&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -33254,7 +33191,8 @@ cj7ccwAAAABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;strong&gt;High Dispersal&lt;/strong&gt;: All features have similar statistics; no one feature has significantly more “activity” than the other features. This is checked by plotting the mean squared activations of each feature obtained by averaging the squared values in the feature matrix across the examples.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;High Dispersal&lt;/strong&gt;: All features have similar statistics; no one feature has significantly more “activity” than the other features. This is checked by plotting the mean squared activations of each feature obtained by averaging
+the squared values in the feature matrix across the examples.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -34163,12 +34101,13 @@ h8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDoejD/8PpBd2en0k3/AAAAAASUVORK5CYII=
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;In summary&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;sparse filtering is a unsupervsied feature learning algorithm that does not try to model the data's distribution but rather to learn features directly which are sparsely activated&lt;/li&gt;
+&lt;li&gt;sparse filtering is a unsupervsied feature learning algorithm that does not try to model the data&amp;#39;s distribution but rather to learn features directly which are sparsely activated&lt;/li&gt;
 &lt;li&gt;the learned feature extractors obey specific sparsity conditions (lifetime sparsity, population sparsity, and high dispersal)&lt;/li&gt;
 &lt;li&gt;deep archictectures can be trained using greedy layer-wise stacking&lt;/li&gt;
-&lt;li&gt;the only parameter requiring tuning is the number of features per layer&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;the only parameter requiring tuning is the number of features per layer&lt;/p&gt;
 &lt;p&gt;We will analyse the quality of the learned features in a predictive setting in a follow-up post.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;
@@ -34178,7 +34117,7 @@ h8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDoejD/8PpBd2en0k3/AAAAAASUVORK5CYII=
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;This notebook generates &lt;strong&gt;reliability diagrams&lt;/strong&gt; for some classifiers on an artificial data set. Reliability diagrams allow checking if the predicted probabilities of a binary classifier are well calibrated. For perfectly calibrated predictions, the curve in a reliability diagram should be as close as possible to the diagonal/identity. This would correspond to a situation in which among &lt;span class="math"&gt;\(N\)&lt;/span&gt; instances for which a classifier predicts probability &lt;span class="math"&gt;\(p\)&lt;/span&gt; for class &lt;span class="math"&gt;\(A\)&lt;/span&gt;, the ratio of instances which actually belong to class &lt;span class="math"&gt;\(A\)&lt;/span&gt; is approx. &lt;span class="math"&gt;\(p\)&lt;/span&gt; (for any &lt;span class="math"&gt;\(p\)&lt;/span&gt; and sufficiently large &lt;span class="math"&gt;\(N\)&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;This notebook generates &lt;strong&gt;reliability diagrams&lt;/strong&gt; for some classifiers on an artificial data set. Reliability diagrams allow checking if the predicted probabilities of a binary classifier are well calibrated. For perfectly calibrated predictions, the curve in a reliability diagram should be as close as possible to the diagonal/identity. This would correspond to a situation in which among $N$ instances for which a classifier predicts probability $p$ for class $A$, the ratio of instances which actually belong to class $A$ is approx. $p$ (for any $p$ and sufficiently large $N$).   &lt;/p&gt;
 &lt;p&gt;This notebook reproduces some of the results from the paper &lt;a href="http://machinelearning.wustl.edu/mlpapers/paper_files/icml2005_Niculescu-MizilC05.pdf"&gt;Predicting Good Probabilities with Supervised Learning&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -34434,7 +34373,14 @@ In&amp;nbsp;[6]:
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Compute reliability curves for different classifiers: * Logistic Regression * Naive Bayes * Random Forest * Support-Vector Classification (scores) * Support-Vector Classification + Isotonoc Calibration&lt;/p&gt;
+&lt;p&gt;Compute reliability curves for different classifiers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Logistic Regression&lt;/li&gt;
+&lt;li&gt;Naive Bayes&lt;/li&gt;
+&lt;li&gt;Random Forest&lt;/li&gt;
+&lt;li&gt;Support-Vector Classification (scores)&lt;/li&gt;
+&lt;li&gt;Support-Vector Classification + Isotonoc Calibration&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -35845,7 +35791,20 @@ ZgAAAABJRU5ErkJggg==
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Logistic regression&lt;/strong&gt; returns well-calibrated probabilities close to the &amp;quot;perfect&amp;quot; line&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Naive Bayes&lt;/strong&gt; tends to push probabilties to 0 or 1 (note the counts in the histograms). This is mainly because it makes the assumption that features are conditionally independent given the class, which is not the case in this dataset which contains 2 redundant features.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Random Forest&lt;/strong&gt; shows the opposite behavior: The histograms show peaks at approx. 0.1 and 0.9 probability, while probabilities close to 0 or 1 are very rare. An explanation for this is given by Niculescu-Mizil and Caruana: &amp;quot;Methods such as bagging and random forests that average predictions from a base set of models can have difficulty making predictions near 0 and 1 because variance in the underlying base models will bias predictions that should be near zero or one away from these values. Because predictions are restricted to the interval [0,1], errors caused by variance tend to be one-sided near zero and one. For example, if a model should predict p = 0 for a case, the only way bagging can achieve this is if all bagged trees predict zero. If we add noise to the trees that bagging is averaging over, this noise will cause some trees to predict values larger than 0 for this case, thus moving the average prediction of the bagged ensemble away from 0. We observe this effect most strongly with random forests because the base-level trees trained with random forests have relatively high variance due to feature subseting.&amp;quot; As a result, the calibration curve shows a characteristic sigmoid shape, indicating that the classifier could trust its &amp;quot;intuition&amp;quot; more and return probabilties closer to 0 or 1 typically. A post-processing such as Platt-calibration, which fits a sigmoid to the probabilities on a separate calibration dataset, would typically help if the calibration curve is sigmoid.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Random Forest&lt;/strong&gt; shows the opposite behavior: The histograms show peaks at approx. 0.1 and 0.9 probability, while probabilities close to 0 or 1 are very rare. An explanation for this is given by Niculescu-Mizil and Caruana: &amp;quot;Methods such as bagging
+and random forests that average predictions from a base
+set of models can have difficulty making predictions near 0
+and 1 because variance in the underlying base models will
+bias predictions that should be near zero or one away from
+these values. Because predictions are restricted to the interval [0,1], errors caused by variance tend to be one-sided
+near zero and one. For example, if a model should predict
+p = 0 for a case, the only way bagging can achieve this is
+if all bagged trees predict zero. If we add noise to the trees
+that bagging is averaging over, this noise will cause some
+trees to predict values larger than 0 for this case, thus moving the average prediction of the bagged ensemble away
+from 0. We observe this effect most strongly with random
+forests because the base-level trees trained with random
+forests have relatively high variance due to feature subseting.&amp;quot; As a result, the calibration curve shows a characteristic sigmoid shape, indicating that the classifier could trust its &amp;quot;intuition&amp;quot; more and return probabilties closer to 0 or 1 typically. A post-processing such as Platt-calibration, which fits a sigmoid to the probabilities on a separate calibration dataset, would typically help if the calibration curve is sigmoid.&lt;/li&gt;
 &lt;li&gt;The scores of a &lt;strong&gt;Support Vector Classification&lt;/strong&gt; (SVC), which are linearly related to the distance of the sample from the hyperplane, show a similar but even stronger effect as the Random Forest. This is not too surprising as the scores are in no sense probabilties and must not be interpreted as such as the curve shows.&lt;/li&gt;
 &lt;li&gt;One alternative to Platt-calibration is Isotonic Regression. While Platt-calibration fits a sigmoid, Isotonic Regression fits an arbitrary increasing (isotonic) function. Thus, it has a weaker inducttive bias and can be applied more broadly (also in situations where the calibration curve is not sigmoid). The downside is that it typically requires more calibration data because its inductive bias is weaker. This can also be seen in the &lt;strong&gt;SVC + IR&lt;/strong&gt; curve: While the sigmoid shape of the pure SVC scores is removed and the calibration curve does not show a clear bias, it is quite noisy, indicating much variance. Thus, the used calibration dataset (even thoug 4 times larger than the training data) is too small in this case.&lt;/li&gt;
 &lt;/ul&gt;

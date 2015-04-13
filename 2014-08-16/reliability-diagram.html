@@ -1350,7 +1350,7 @@ input.engine_num_input{width:60px}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
 .ansigreen{color:#006400}
-.ansiyellow{color:#a52a2a}
+.ansiyellow{color:#c4a000}
 .ansiblue{color:#00008b}
 .ansipurple{color:#9400d3}
 .ansicyan{color:#4682b4}
@@ -1773,7 +1773,7 @@ jQuery(document).ready(function($) {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This notebook generates <strong>reliability diagrams</strong> for some classifiers on an artificial data set. Reliability diagrams allow checking if the predicted probabilities of a binary classifier are well calibrated. For perfectly calibrated predictions, the curve in a reliability diagram should be as close as possible to the diagonal/identity. This would correspond to a situation in which among <span class="math">\(N\)</span> instances for which a classifier predicts probability <span class="math">\(p\)</span> for class <span class="math">\(A\)</span>, the ratio of instances which actually belong to class <span class="math">\(A\)</span> is approx. <span class="math">\(p\)</span> (for any <span class="math">\(p\)</span> and sufficiently large <span class="math">\(N\)</span>).</p>
+<p>This notebook generates <strong>reliability diagrams</strong> for some classifiers on an artificial data set. Reliability diagrams allow checking if the predicted probabilities of a binary classifier are well calibrated. For perfectly calibrated predictions, the curve in a reliability diagram should be as close as possible to the diagonal/identity. This would correspond to a situation in which among $N$ instances for which a classifier predicts probability $p$ for class $A$, the ratio of instances which actually belong to class $A$ is approx. $p$ (for any $p$ and sufficiently large $N$).   </p>
 <p>This notebook reproduces some of the results from the paper <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/icml2005_Niculescu-MizilC05.pdf">Predicting Good Probabilities with Supervised Learning</a>.</p>
 </div>
 </div>
@@ -2029,7 +2029,14 @@ In&nbsp;[6]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Compute reliability curves for different classifiers: * Logistic Regression * Naive Bayes * Random Forest * Support-Vector Classification (scores) * Support-Vector Classification + Isotonoc Calibration</p>
+<p>Compute reliability curves for different classifiers:</p>
+<ul>
+<li>Logistic Regression</li>
+<li>Naive Bayes</li>
+<li>Random Forest</li>
+<li>Support-Vector Classification (scores)</li>
+<li>Support-Vector Classification + Isotonoc Calibration</li>
+</ul>
 </div>
 </div>
 </div>
@@ -3440,7 +3447,20 @@ ZgAAAABJRU5ErkJggg==
 <ul>
 <li><strong>Logistic regression</strong> returns well-calibrated probabilities close to the &quot;perfect&quot; line</li>
 <li><strong>Naive Bayes</strong> tends to push probabilties to 0 or 1 (note the counts in the histograms). This is mainly because it makes the assumption that features are conditionally independent given the class, which is not the case in this dataset which contains 2 redundant features.</li>
-<li><strong>Random Forest</strong> shows the opposite behavior: The histograms show peaks at approx. 0.1 and 0.9 probability, while probabilities close to 0 or 1 are very rare. An explanation for this is given by Niculescu-Mizil and Caruana: &quot;Methods such as bagging and random forests that average predictions from a base set of models can have difficulty making predictions near 0 and 1 because variance in the underlying base models will bias predictions that should be near zero or one away from these values. Because predictions are restricted to the interval [0,1], errors caused by variance tend to be one-sided near zero and one. For example, if a model should predict p = 0 for a case, the only way bagging can achieve this is if all bagged trees predict zero. If we add noise to the trees that bagging is averaging over, this noise will cause some trees to predict values larger than 0 for this case, thus moving the average prediction of the bagged ensemble away from 0. We observe this effect most strongly with random forests because the base-level trees trained with random forests have relatively high variance due to feature subseting.&quot; As a result, the calibration curve shows a characteristic sigmoid shape, indicating that the classifier could trust its &quot;intuition&quot; more and return probabilties closer to 0 or 1 typically. A post-processing such as Platt-calibration, which fits a sigmoid to the probabilities on a separate calibration dataset, would typically help if the calibration curve is sigmoid.</li>
+<li><strong>Random Forest</strong> shows the opposite behavior: The histograms show peaks at approx. 0.1 and 0.9 probability, while probabilities close to 0 or 1 are very rare. An explanation for this is given by Niculescu-Mizil and Caruana: &quot;Methods such as bagging
+and random forests that average predictions from a base
+set of models can have difficulty making predictions near 0
+and 1 because variance in the underlying base models will
+bias predictions that should be near zero or one away from
+these values. Because predictions are restricted to the interval [0,1], errors caused by variance tend to be one-sided
+near zero and one. For example, if a model should predict
+p = 0 for a case, the only way bagging can achieve this is
+if all bagged trees predict zero. If we add noise to the trees
+that bagging is averaging over, this noise will cause some
+trees to predict values larger than 0 for this case, thus moving the average prediction of the bagged ensemble away
+from 0. We observe this effect most strongly with random
+forests because the base-level trees trained with random
+forests have relatively high variance due to feature subseting.&quot; As a result, the calibration curve shows a characteristic sigmoid shape, indicating that the classifier could trust its &quot;intuition&quot; more and return probabilties closer to 0 or 1 typically. A post-processing such as Platt-calibration, which fits a sigmoid to the probabilities on a separate calibration dataset, would typically help if the calibration curve is sigmoid.</li>
 <li>The scores of a <strong>Support Vector Classification</strong> (SVC), which are linearly related to the distance of the sample from the hyperplane, show a similar but even stronger effect as the Random Forest. This is not too surprising as the scores are in no sense probabilties and must not be interpreted as such as the curve shows.</li>
 <li>One alternative to Platt-calibration is Isotonic Regression. While Platt-calibration fits a sigmoid, Isotonic Regression fits an arbitrary increasing (isotonic) function. Thus, it has a weaker inducttive bias and can be applied more broadly (also in situations where the calibration curve is not sigmoid). The downside is that it typically requires more calibration data because its inductive bias is weaker. This can also be seen in the <strong>SVC + IR</strong> curve: While the sigmoid shape of the pure SVC scores is removed and the calibration curve does not show a clear bias, it is quite noisy, indicating much variance. Thus, the used calibration dataset (even thoug 4 times larger than the training data) is too small in this case.</li>
 </ul>

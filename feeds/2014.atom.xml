@@ -5,16 +5,20 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;An illustration of unsupervised learning of features for images from the Olivetti faces dataset using the sparse filtering algorithm. This work is based on the paper &amp;quot;Sparse Filtering&amp;quot; by the authors Jiquan Ngiam, Pang Wei Koh, Zhenghao Chen, Sonia Bhaskar, and Andrew Y. Ng published in NIPS 2011.&lt;/p&gt;
-&lt;p&gt;The sparse filtering algorithm does not try to model the data's distribution but rather to learn features which are sparsely activated, in the sense that&lt;/p&gt;
+&lt;p&gt;An illustration of unsupervised learning of features for images from the Olivetti faces dataset
+using the sparse filtering algorithm. This work is based on the paper &amp;quot;Sparse Filtering&amp;quot;
+by the authors Jiquan Ngiam, Pang Wei Koh, Zhenghao Chen, Sonia Bhaskar, and Andrew Y. Ng published in NIPS 2011.&lt;/p&gt;
+&lt;p&gt;The sparse filtering algorithm does not try to model the data&amp;#39;s distribution but rather to learn features which
+are sparsely activated, in the sense that&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;for each example, only a small subset of features is activated (&amp;quot;Population Sparsity&amp;quot;)&lt;/li&gt;
 &lt;li&gt;each feature is only activated on a small subset of he examples (&amp;quot;Lifetime Sparsity&amp;quot;)&lt;/li&gt;
 &lt;li&gt;features are roughly activated equally often (&amp;quot;High Dispersal&amp;quot;)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;This sparsity is encoded as an objective function and L-BFGS is used to minimize this function.&lt;/p&gt;
+&lt;p&gt;This sparsity is encoded as an objective function and L-BFGS is used to minimize this
+function.&lt;/p&gt;
 &lt;p&gt;This notebook illustrates the algorithm on the Olivetti faces dataset.&lt;/p&gt;
-&lt;p&gt;The source code of the sparse-filtering implementation is avalaible at https://github.com/jmetzen/sparse-filtering&lt;/p&gt;
+&lt;p&gt;The source code of the sparse-filtering implementation is avalaible at &lt;a href="https://github.com/jmetzen/sparse-filtering"&gt;https://github.com/jmetzen/sparse-filtering&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -4962,7 +4966,8 @@ cj7ccwAAAABJRU5ErkJggg==
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;strong&gt;High Dispersal&lt;/strong&gt;: All features have similar statistics; no one feature has significantly more “activity” than the other features. This is checked by plotting the mean squared activations of each feature obtained by averaging the squared values in the feature matrix across the examples.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;High Dispersal&lt;/strong&gt;: All features have similar statistics; no one feature has significantly more “activity” than the other features. This is checked by plotting the mean squared activations of each feature obtained by averaging
+the squared values in the feature matrix across the examples.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -5871,12 +5876,13 @@ h8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDoejD/8PpBd2en0k3/AAAAAASUVORK5CYII=
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;In summary&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;sparse filtering is a unsupervsied feature learning algorithm that does not try to model the data's distribution but rather to learn features directly which are sparsely activated&lt;/li&gt;
+&lt;li&gt;sparse filtering is a unsupervsied feature learning algorithm that does not try to model the data&amp;#39;s distribution but rather to learn features directly which are sparsely activated&lt;/li&gt;
 &lt;li&gt;the learned feature extractors obey specific sparsity conditions (lifetime sparsity, population sparsity, and high dispersal)&lt;/li&gt;
 &lt;li&gt;deep archictectures can be trained using greedy layer-wise stacking&lt;/li&gt;
-&lt;li&gt;the only parameter requiring tuning is the number of features per layer&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;the only parameter requiring tuning is the number of features per layer&lt;/p&gt;
 &lt;p&gt;We will analyse the quality of the learned features in a predictive setting in a follow-up post.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;
@@ -5886,7 +5892,7 @@ h8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDoejD/8PpBd2en0k3/AAAAAASUVORK5CYII=
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;This notebook generates &lt;strong&gt;reliability diagrams&lt;/strong&gt; for some classifiers on an artificial data set. Reliability diagrams allow checking if the predicted probabilities of a binary classifier are well calibrated. For perfectly calibrated predictions, the curve in a reliability diagram should be as close as possible to the diagonal/identity. This would correspond to a situation in which among &lt;span class="math"&gt;\(N\)&lt;/span&gt; instances for which a classifier predicts probability &lt;span class="math"&gt;\(p\)&lt;/span&gt; for class &lt;span class="math"&gt;\(A\)&lt;/span&gt;, the ratio of instances which actually belong to class &lt;span class="math"&gt;\(A\)&lt;/span&gt; is approx. &lt;span class="math"&gt;\(p\)&lt;/span&gt; (for any &lt;span class="math"&gt;\(p\)&lt;/span&gt; and sufficiently large &lt;span class="math"&gt;\(N\)&lt;/span&gt;).&lt;/p&gt;
+&lt;p&gt;This notebook generates &lt;strong&gt;reliability diagrams&lt;/strong&gt; for some classifiers on an artificial data set. Reliability diagrams allow checking if the predicted probabilities of a binary classifier are well calibrated. For perfectly calibrated predictions, the curve in a reliability diagram should be as close as possible to the diagonal/identity. This would correspond to a situation in which among $N$ instances for which a classifier predicts probability $p$ for class $A$, the ratio of instances which actually belong to class $A$ is approx. $p$ (for any $p$ and sufficiently large $N$).   &lt;/p&gt;
 &lt;p&gt;This notebook reproduces some of the results from the paper &lt;a href="http://machinelearning.wustl.edu/mlpapers/paper_files/icml2005_Niculescu-MizilC05.pdf"&gt;Predicting Good Probabilities with Supervised Learning&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -6142,7 +6148,14 @@ In&amp;nbsp;[6]:
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;Compute reliability curves for different classifiers: * Logistic Regression * Naive Bayes * Random Forest * Support-Vector Classification (scores) * Support-Vector Classification + Isotonoc Calibration&lt;/p&gt;
+&lt;p&gt;Compute reliability curves for different classifiers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Logistic Regression&lt;/li&gt;
+&lt;li&gt;Naive Bayes&lt;/li&gt;
+&lt;li&gt;Random Forest&lt;/li&gt;
+&lt;li&gt;Support-Vector Classification (scores)&lt;/li&gt;
+&lt;li&gt;Support-Vector Classification + Isotonoc Calibration&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -7553,7 +7566,20 @@ ZgAAAABJRU5ErkJggg==
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Logistic regression&lt;/strong&gt; returns well-calibrated probabilities close to the &amp;quot;perfect&amp;quot; line&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Naive Bayes&lt;/strong&gt; tends to push probabilties to 0 or 1 (note the counts in the histograms). This is mainly because it makes the assumption that features are conditionally independent given the class, which is not the case in this dataset which contains 2 redundant features.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Random Forest&lt;/strong&gt; shows the opposite behavior: The histograms show peaks at approx. 0.1 and 0.9 probability, while probabilities close to 0 or 1 are very rare. An explanation for this is given by Niculescu-Mizil and Caruana: &amp;quot;Methods such as bagging and random forests that average predictions from a base set of models can have difficulty making predictions near 0 and 1 because variance in the underlying base models will bias predictions that should be near zero or one away from these values. Because predictions are restricted to the interval [0,1], errors caused by variance tend to be one-sided near zero and one. For example, if a model should predict p = 0 for a case, the only way bagging can achieve this is if all bagged trees predict zero. If we add noise to the trees that bagging is averaging over, this noise will cause some trees to predict values larger than 0 for this case, thus moving the average prediction of the bagged ensemble away from 0. We observe this effect most strongly with random forests because the base-level trees trained with random forests have relatively high variance due to feature subseting.&amp;quot; As a result, the calibration curve shows a characteristic sigmoid shape, indicating that the classifier could trust its &amp;quot;intuition&amp;quot; more and return probabilties closer to 0 or 1 typically. A post-processing such as Platt-calibration, which fits a sigmoid to the probabilities on a separate calibration dataset, would typically help if the calibration curve is sigmoid.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Random Forest&lt;/strong&gt; shows the opposite behavior: The histograms show peaks at approx. 0.1 and 0.9 probability, while probabilities close to 0 or 1 are very rare. An explanation for this is given by Niculescu-Mizil and Caruana: &amp;quot;Methods such as bagging
+and random forests that average predictions from a base
+set of models can have difficulty making predictions near 0
+and 1 because variance in the underlying base models will
+bias predictions that should be near zero or one away from
+these values. Because predictions are restricted to the interval [0,1], errors caused by variance tend to be one-sided
+near zero and one. For example, if a model should predict
+p = 0 for a case, the only way bagging can achieve this is
+if all bagged trees predict zero. If we add noise to the trees
+that bagging is averaging over, this noise will cause some
+trees to predict values larger than 0 for this case, thus moving the average prediction of the bagged ensemble away
+from 0. We observe this effect most strongly with random
+forests because the base-level trees trained with random
+forests have relatively high variance due to feature subseting.&amp;quot; As a result, the calibration curve shows a characteristic sigmoid shape, indicating that the classifier could trust its &amp;quot;intuition&amp;quot; more and return probabilties closer to 0 or 1 typically. A post-processing such as Platt-calibration, which fits a sigmoid to the probabilities on a separate calibration dataset, would typically help if the calibration curve is sigmoid.&lt;/li&gt;
 &lt;li&gt;The scores of a &lt;strong&gt;Support Vector Classification&lt;/strong&gt; (SVC), which are linearly related to the distance of the sample from the hyperplane, show a similar but even stronger effect as the Random Forest. This is not too surprising as the scores are in no sense probabilties and must not be interpreted as such as the curve shows.&lt;/li&gt;
 &lt;li&gt;One alternative to Platt-calibration is Isotonic Regression. While Platt-calibration fits a sigmoid, Isotonic Regression fits an arbitrary increasing (isotonic) function. Thus, it has a weaker inducttive bias and can be applied more broadly (also in situations where the calibration curve is not sigmoid). The downside is that it typically requires more calibration data because its inductive bias is weaker. This can also be seen in the &lt;strong&gt;SVC + IR&lt;/strong&gt; curve: While the sigmoid shape of the pure SVC scores is removed and the calibration curve does not show a clear bias, it is quite noisy, indicating much variance. Thus, the used calibration dataset (even thoug 4 times larger than the training data) is too small in this case.&lt;/li&gt;
 &lt;/ul&gt;

@@ -1350,7 +1350,7 @@ input.engine_num_input{width:60px}
 .ansiblack{color:#000}
 .ansired{color:#8b0000}
 .ansigreen{color:#006400}
-.ansiyellow{color:#a52a2a}
+.ansiyellow{color:#c4a000}
 .ansiblue{color:#00008b}
 .ansipurple{color:#9400d3}
 .ansicyan{color:#4682b4}
@@ -1773,16 +1773,20 @@ jQuery(document).ready(function($) {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>An illustration of unsupervised learning of features for images from the Olivetti faces dataset using the sparse filtering algorithm. This work is based on the paper &quot;Sparse Filtering&quot; by the authors Jiquan Ngiam, Pang Wei Koh, Zhenghao Chen, Sonia Bhaskar, and Andrew Y. Ng published in NIPS 2011.</p>
-<p>The sparse filtering algorithm does not try to model the data's distribution but rather to learn features which are sparsely activated, in the sense that</p>
+<p>An illustration of unsupervised learning of features for images from the Olivetti faces dataset
+using the sparse filtering algorithm. This work is based on the paper &quot;Sparse Filtering&quot;
+by the authors Jiquan Ngiam, Pang Wei Koh, Zhenghao Chen, Sonia Bhaskar, and Andrew Y. Ng published in NIPS 2011.</p>
+<p>The sparse filtering algorithm does not try to model the data&#39;s distribution but rather to learn features which
+are sparsely activated, in the sense that</p>
 <ul>
 <li>for each example, only a small subset of features is activated (&quot;Population Sparsity&quot;)</li>
 <li>each feature is only activated on a small subset of he examples (&quot;Lifetime Sparsity&quot;)</li>
 <li>features are roughly activated equally often (&quot;High Dispersal&quot;)</li>
 </ul>
-<p>This sparsity is encoded as an objective function and L-BFGS is used to minimize this function.</p>
+<p>This sparsity is encoded as an objective function and L-BFGS is used to minimize this
+function.</p>
 <p>This notebook illustrates the algorithm on the Olivetti faces dataset.</p>
-<p>The source code of the sparse-filtering implementation is avalaible at https://github.com/jmetzen/sparse-filtering</p>
+<p>The source code of the sparse-filtering implementation is avalaible at <a href="https://github.com/jmetzen/sparse-filtering">https://github.com/jmetzen/sparse-filtering</a></p>
 </div>
 </div>
 </div>
@@ -6730,7 +6734,8 @@ cj7ccwAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>High Dispersal</strong>: All features have similar statistics; no one feature has significantly more “activity” than the other features. This is checked by plotting the mean squared activations of each feature obtained by averaging the squared values in the feature matrix across the examples.</p>
+<p><strong>High Dispersal</strong>: All features have similar statistics; no one feature has significantly more “activity” than the other features. This is checked by plotting the mean squared activations of each feature obtained by averaging
+the squared values in the feature matrix across the examples.</p>
 </div>
 </div>
 </div>
@@ -7639,12 +7644,13 @@ h8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDoejD/8PpBd2en0k3/AAAAAASUVORK5CYII=
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In summary</p>
 <ul>
-<li>sparse filtering is a unsupervsied feature learning algorithm that does not try to model the data's distribution but rather to learn features directly which are sparsely activated</li>
+<li>sparse filtering is a unsupervsied feature learning algorithm that does not try to model the data&#39;s distribution but rather to learn features directly which are sparsely activated</li>
 <li>the learned feature extractors obey specific sparsity conditions (lifetime sparsity, population sparsity, and high dispersal)</li>
 <li>deep archictectures can be trained using greedy layer-wise stacking</li>
-<li>the only parameter requiring tuning is the number of features per layer</li>
-</ul>
+<li><p>the only parameter requiring tuning is the number of features per layer</p>
 <p>We will analyse the quality of the learned features in a predictive setting in a follow-up post.</p>
+</li>
+</ul>
 </div>
 </div>
 </div></p>
