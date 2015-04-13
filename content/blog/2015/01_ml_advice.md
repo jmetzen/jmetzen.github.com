@@ -1,6 +1,6 @@
 Title: Advice for applying Machine Learning
 Date: 2015-01-29 14:23
-Tags: python, classification, machine-learning
+Tags: python, classification, machine-learning, tutorial
 Slug: 2015-01-29/ml_advice
 comments: true
 Author: Jan Hendrik Metzen
