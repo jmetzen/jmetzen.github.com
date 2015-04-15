@@ -7,7 +7,7 @@
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;As a follow-up of my previous post on &lt;a href="https://jmetzen.github.io/2014-08-16/reliability-diagram.html"&gt;reliability diagrams&lt;/a&gt;, I have worked jointly with Alexandre Gramfort, Mathieu Blondel and Balazs Kegl (with reviews by the whole team, in particular Olivier Grisel) on adding probability calibration and reliability diagrams to scikit-learn. Those have been added in the recent 0.16 release of scikit-learn as &lt;a href="http://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibratedClassifierCV.html#sklearn.calibration.CalibratedClassifierCV"&gt;CalibratedClassifierCV&lt;/a&gt; and &lt;a href="http://scikit-learn.org/stable/modules/generated/sklearn.calibration.calibration_curve.html#sklearn.calibration.calibration_curve"&gt;calibration_curve&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;This post contains an interactive version of the &lt;a href="http://scikit-learn.org/dev/modules/calibration.html"&gt;documentation&lt;/a&gt; in the form of an IPython notebook; parts of the text/code are thus due to my coauthors. &lt;/p&gt;
-&lt;p&gt;Note that the 0.16 release of scikit-learn contains a bug in &lt;code&gt;IsotonicRegression&lt;/code&gt;, which has been fixed in the current development version. For obtaining correct results with this notebook, you need to use the development version (or any of the future versions of scikit-learn)&lt;/p&gt;
+&lt;p&gt;Note that the 0.16 release of scikit-learn contains a bug in &lt;code&gt;IsotonicRegression&lt;/code&gt;, which has been fixed in the 0.16.1 release. For obtaining correct results with this notebook, you need to use 0.16.1 or any later version.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
