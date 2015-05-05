@@ -138,6 +138,9 @@ pySPACE
 
 Community
 ----------
+2015
+:    Organizer and Lecturer of [Robocademy Course "NT3 – Machine Learning for Autonomous Robots"](http://www.robocademy.eu/en/training/network-courses/nt3-machine-learning-for-autonomous-robots.html) 
+
 2014
 :    Reviewer of the [Scientific Reports](http://www.nature.com/srep/index.html) journal of the Nature publisher
 
