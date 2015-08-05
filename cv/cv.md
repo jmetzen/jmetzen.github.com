@@ -141,6 +141,12 @@ Community
 2015
 :    Organizer and Lecturer of [Robocademy Course "NT3 – Machine Learning for Autonomous Robots"](http://www.robocademy.eu/en/training/network-courses/nt3-machine-learning-for-autonomous-robots.html) 
 
+2015
+:    Reviewer of the [Artificial Intelligence](http://www.journals.elsevier.com/artificial-intelligence) journal
+
+2015
+:    Scientific Program Committee of the International Symposium on Intelligent Computing Systems ([ISICS 2016](http://www.isics-symposium.org/))
+
 2014
 :    Reviewer of the [Scientific Reports](http://www.nature.com/srep/index.html) journal of the Nature publisher
 
