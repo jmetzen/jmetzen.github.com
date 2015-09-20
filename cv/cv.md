@@ -6,24 +6,53 @@ lastname: Metzen
 photo: images/picture.jpg
 contact: https://jmetzen.github.io/
 homepage: https://jmetzen.github.io/
-email: jhm@informatik.uni-bremen.de
-# mobile: '+49 (172) 7563092'
-# phone: '+49 (4221) 4901481'
-# address:
-#  city: 27749 Delmenhorst
-#  country: Germany
-phone: +49-(421)-218-45-4123
+email: janmetzen@mailbox.org
+mobile: '+49 (172) 7563092'
+phone: '+49 (4221) 4901481'
 address:
-  city: DFKI RIC Building, Room A3.13, Robert-Hooke-Str. 1, 28359 Bremen
+  city: Schliemannstraße 24 <br /> 27749 Delmenhorst <br />
   country: Germany
 settings:
   protect-email: true
   protect-mobile: true
   protect-phone: true
   protect-fax: true
+  protect-address: true
 footer: |
   - [jmetzen](http://github.com/jmetzen)
 ---
+
+Personal Informations
+---------------------
+
+Date of Birth
+:     8th January 1981
+
+Marital Status
+:     married, one daughter (age: 6 month)
+
+Nationality
+:     german
+
+Sex
+:     male
+
+Driving License
+:     class B
+
+
+Skills
+------
+
+programming languages
+:     Python, C++
+
+
+languages
+:     german (mother tongue), english (fluent), spanish (basic)
+
+
+
 
 Research
 --------
@@ -89,11 +118,57 @@ Publications
 -------------
 You can find a list of my publications on my [official website](http://www.informatik.uni-bremen.de/~jhm/publications/class_type.html)
 
-Teaching
-----------
+
+Open Source Software
+--------------------
+
+I regularly contribute to open source machine learning software in the following projects:
+
+[BOLeRo](http://robotik.dfki-bremen.de/de/forschung/softwaretools/bolero.html)
+:    **Core contributor**. BOLeRo provides tools to learn behaviors for robots. That includes behavior representations as well as reinforcement learning, black-box optimization, and evolutionary algorithms and imitation learning. It provides a C++ and a Python interface to be efficient where this is required and to be flexible and convenient where performance is not an issue. Because the library provides a C++ interface, it is easy to integrate in most robotic frameworks, e.g. the robot operating system (ROS) or the robot construction kit (Rock). 
+
+[scikit-learn](http://scikit-learn.org/stable/) 
+:    **Contributor**. scikit-learn is the de-facto standard tool for machine learning in the scientific Python tool stack. It is widely used in academia and industry. I have contributed tools for [probability calibration of classifiers](http://scikit-learn.org/stable/modules/calibration.html) and for [kernel ridge regression](http://scikit-learn.org/stable/modules/kernel_ridge.html) to scikit-learn. Moreover, I have written a complete redesign of the Gaussian process module. This [pull request](https://github.com/scikit-learn/scikit-learn/pull/4270) will most likely be contained in version 0.18 of scikit-learn.
+
+[pySPACE](http://pyspace.github.io/pyspace/)
+:    **Core contributor**. pySPACE is a Signal Processing And Classification Environment (SPACE) written in Python interfacing to the user with YAML configuration files and enabling parallel process execution. pySPACE allows rapid specification, execution, and analysis of empirical investigations (short: benchmarking) in signal processing and machine learning. Besides the benchmarking way of executing pySPACE where you can evaluate your data with your own configuration of algorithms, the software also provides an on-line mode where you can directly execute signal processing as soon as you have the data in an on-line fashion. For more information, please refer to our [paper](http://www.frontiersin.org/neuroinformatics/10.3389/fninf.2013.00040/abstract) published in the research topic "Python in Neuroscience II" in the Frontiers in Neuroinformatics journal.
+
+[MMLF](http://mmlf.sourceforge.net/)
+:    **Lead developer**. The Maja Machine Learning Framework (MMLF) is a general framework for problems in the domain of Reinforcement Learning (RL) written in python. It provides a set of RL related algorithms and a set of benchmark domains. Furthermore it is easily extensible and allows to automate benchmarking of different agents. Among the RL algorithms are TD(lambda), CMA-ES, Fitted R-Max, Monte-Carlo learning, the DYNA-TD and the actor-critic architecture. MMLF contains different variants of the maze-world and pole-balancing problem class as well as the mountain-car testbed and the pinball maze domain.
+
+
+Scientific Community
+--------------------
+2015
+:    Organizer and Lecturer of [Robocademy Course "NT3 – Machine Learning for Autonomous Robots"](http://www.robocademy.eu/en/training/network-courses/nt3-machine-learning-for-autonomous-robots.html) 
+
+2015
+:    Reviewer of the [Artificial Intelligence](http://www.journals.elsevier.com/artificial-intelligence) journal
+
+2015
+:    Scientific Program Committee of the International Symposium on Intelligent Computing Systems ([ISICS 2016](http://www.isics-symposium.org/))
+
+2014
+:    Reviewer of the [Scientific Reports](http://www.nature.com/srep/index.html) journal of the Nature publisher
+
+2013
+:    Reviewer of the [Frontiers in Cognitive Science](http://www.frontiersin.org/Cognitive_Science) journal
+
+2013-2014
+:    Reviewer of the [Journal of Machine Learning Research (JMLR)](http://jmlr.org/)
+
+2012
+:    Program committee of 5th International Workshop on Evolutionary and Reinforcement Learning for Autonomous Robot Systems ([ERLARS 2012](http://www.erlars.org/2012/))
+
+2009
+:    Reviewer of the [Image and Vision Computing Journal (IVC)](http://www.journals.elsevier.com/image-and-vision-computing/)
+
+
+University Teaching
+-------------------
 
 SS 2015
-:    Reinforcement Lernen
+:    [Reinforcement Lernen](http://robotik.dfki-bremen.de/de/lehre/lehrveranstaltungen/aktuelles-semester.html)
 
 WS 2014
 :    [Lernverfahren für autonome Roboter](http://robotik.dfki-bremen.de/de/lehre/lehrveranstaltungen/vergangene-semester/wintersemester-201415.html)
@@ -129,47 +204,6 @@ WS 2010
 :    Maschinelles Lernen für autonome Roboter 2
 
 
-Open Source Software
---------------------
-
-I am passionate about contributing to open source machine learning software and have done so regularly in the following projects:
-
-[BOLeRo](http://robotik.dfki-bremen.de/de/forschung/softwaretools/bolero.html)
-:    **Core contributor**. BOLeRo provides tools to learn behaviors for robots. That includes behavior representations as well as reinforcement learning, black-box optimization, and evolutionary algorithms and imitation learning. It provides a C++ and a Python interface to be efficient where this is required and to be flexible and convenient where performance is not an issue. Because the library provides a C++ interface, it is easy to integrate in most robotic frameworks, e.g. the robot operating system (ROS) or the robot construction kit (Rock). 
-
-[scikit-learn](http://scikit-learn.org/stable/) 
-:    **Contributor**. scikit-learn is the de-facto standard tool for machine learning in the scientific Python tool stack. It is widely used in academia and industry. I have contributed tools for [probability calibration of classifiers](http://scikit-learn.org/stable/modules/calibration.html) and for [kernel ridge regression](http://scikit-learn.org/stable/modules/kernel_ridge.html) to scikit-learn. Moreover, I have written a complete redesign of the Gaussian process module. This [pull request](https://github.com/scikit-learn/scikit-learn/pull/4270) will most likely be contained in version 0.18 of scikit-learn.
-
-[pySPACE](http://pyspace.github.io/pyspace/)
-:    **Core contributor**. pySPACE is a Signal Processing And Classification Environment (SPACE) written in Python interfacing to the user with YAML configuration files and enabling parallel process execution. pySPACE allows rapid specification, execution, and analysis of empirical investigations (short: benchmarking) in signal processing and machine learning. Besides the benchmarking way of executing pySPACE where you can evaluate your data with your own configuration of algorithms, the software also provides an on-line mode where you can directly execute signal processing as soon as you have the data in an on-line fashion. For more information, please refer to our [paper](http://www.frontiersin.org/neuroinformatics/10.3389/fninf.2013.00040/abstract) published in the research topic "Python in Neuroscience II" in the Frontiers in Neuroinformatics journal.
-
-MMLF
-:    **Lead developer**. The [Maja Machine Learning Framework (MMLF)](http://mmlf.sourceforge.net/) is a general framework for problems in the domain of Reinforcement Learning (RL) written in python. It provides a set of RL related algorithms and a set of benchmark domains. Furthermore it is easily extensible and allows to automate benchmarking of different agents. Among the RL algorithms are TD(lambda), CMA-ES, Fitted R-Max, Monte-Carlo learning, the DYNA-TD and the actor-critic architecture. MMLF contains different variants of the maze-world and pole-balancing problem class as well as the mountain-car testbed and the pinball maze domain.
-
-
-Scientific Community
---------------------
-2015
-:    Organizer and Lecturer of [Robocademy Course "NT3 – Machine Learning for Autonomous Robots"](http://www.robocademy.eu/en/training/network-courses/nt3-machine-learning-for-autonomous-robots.html) 
-
-2015
-:    Reviewer of the [Artificial Intelligence](http://www.journals.elsevier.com/artificial-intelligence) journal
-
-2015
-:    Scientific Program Committee of the International Symposium on Intelligent Computing Systems ([ISICS 2016](http://www.isics-symposium.org/))
-
-2014
-:    Reviewer of the [Scientific Reports](http://www.nature.com/srep/index.html) journal of the Nature publisher
-
-2013
-:    Reviewer of the [Frontiers in Cognitive Science](http://www.frontiersin.org/Cognitive_Science) journal
-
-2013-2014
-:    Reviewer of the [Journal of Machine Learning Research (JMLR)](http://jmlr.org/)
-
-2012
-:    Program committee of 5th International Workshop on Evolutionary and Reinforcement Learning for Autonomous Robot Systems ([ERLARS 2012](http://www.erlars.org/2012/))
-
-2009
-:    Reviewer of the [Image and Vision Computing Journal (IVC)](http://www.journals.elsevier.com/image-and-vision-computing/)
+Supervised Student Theses
+-------------------------
 
