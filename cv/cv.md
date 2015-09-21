@@ -18,8 +18,8 @@ settings:
   protect-phone: true
   protect-fax: true
   protect-address: true
-footer: |
-  - [jmetzen](http://github.com/jmetzen)
+#footer: |
+#  - [jmetzen](http://github.com/jmetzen)
 ---
 
 Personal Information
@@ -36,7 +36,6 @@ Nationality
 
 Driving License
 :     class B
-
 
 Education
 ---------
@@ -110,16 +109,20 @@ Research Foci
 -----------------
 
 Robot Control Learning
-:    todo
+:    I have developed and extended methods from the domain of reinforcement learning ([relevant publications](http://www.informatik.uni-bremen.de/~jhm/publications/class_rescat.html#Reinforcement%20Learning)) and evolutionary computation ([relevant publications](http://www.informatik.uni-bremen.de/~jhm/publications/class_rescat.html#Neuroevolution)) for learning behaviors of mobile robots. In particular, developing methods for decomposing complex problems into simpler subproblems and developing learning algorithms which combine policy search with active and multi-task learning have been foci of my work. This work was conducted in the project [BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html). 
 
 BCIs
-:    **Brain Computer Interface**: Using supervised machine learning techniques to detect event-related potentials (ERPs) in a human's electroencephalogram (EEG) that indicate that the human has perceived and recognized important messages that have been presented to him or that he intends to execute a movement shortly. My work in the VI-Bot and IMMI project was focused mainly on investigating how the system can detect these ERPs with a minimum amount of labeled training data from the current user by reusing data from historic sessions of the same and other users. [Relevant publications](http://www.informatik.uni-bremen.de/~jhm/publications/class_rescat.html#Brain%20Computer%20Interface)
+:    My work in Brain Computer Interfaces (BCIs) was focused on using supervised machine learning techniques to detect event-related potentials in a human's electroencephalogram (EEG) that indicate that the human has perceived and recognized important messages that have been presented to him or that he intends to execute a movement shortly. My work in the [VI-Bot](http://robotik.dfki-bremen.de/en/research/projects/vi-bot.html) and [IMMI](http://robotik.dfki-bremen.de/en/research/projects/immi.html) projects was focused mainly on developing supervised learning algorithms that allow detecting these ERPs with a minimum amount of labeled training data from the current user by reusing data from historic sessions of the same and other users. [Relevant publications](http://www.informatik.uni-bremen.de/~jhm/publications/class_rescat.html#Brain%20Computer%20Interface)
 
 Biomedical Pattern Recognition
-:    todo
+:    More currently, within the project [Cascade](http://robotik.dfki-bremen.de/en/research/projects/cascade-1.html), we have applied oversegmentation and supervised machine learning approaches to detect aortic calcifications and bifurcations in  intravascular ultrasound (IVUS) and data.
 
 Deep Learning
-:    todo
+:    Together with colleagues, I am currently investigating how graspable objects can be identified and how suitable grasp poses for robotic manipulators can be detected based on applying methods from the field of deep learning to RGB-D camera data. 
+
+Scientific Publications
+-----------------------
+A list of my scientific publications is available on my [official website](http://www.informatik.uni-bremen.de/~jhm/publications/class_type.html). See also my [Google Scholar page](http://scholar.google.com/citations?user=w047VfEAAAAJ&hl=en).
 
 Industry Projects
 -----------------
@@ -136,11 +139,6 @@ Talks
 05/2015
 :    Organizer and Lecturer of [Robocademy Course "NT3 – Machine Learning for Autonomous Robots"](http://www.robocademy.eu/en/training/network-courses/nt3-machine-learning-for-autonomous-robots.html)
 
-Publications
--------------
-You can find a list of my publications on my [official website](http://www.informatik.uni-bremen.de/~jhm/publications/class_type.html)
-
-See also my [Google Scholar page](http://scholar.google.com/citations?user=w047VfEAAAAJ&hl=en)
 
 Open Source Software
 --------------------
@@ -270,3 +268,4 @@ Personnel Development
 
 03/2010
 :     Seminar "Projektmanagement", Geue Coaching & Consulting KG
+
