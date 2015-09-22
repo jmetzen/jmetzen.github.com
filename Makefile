@@ -25,6 +25,8 @@ help:
 html: clean $(OUTPUTDIR)/index.html
 	cd pandoc-moderncv && $(MAKE) html
 	cp -r pandoc-moderncv/dist output/cv
+	cd publications && $(MAKE)
+	cp -r publications/publications output/publications
 	@echo 'Done'
 
 $(OUTPUTDIR)/%.html:
