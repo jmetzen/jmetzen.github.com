@@ -92,33 +92,34 @@ Awards and Grants
 2004 - 2006
 :     **Scholarship** of "Studienstiftung des Deutschen Volkes" (German National Academic Foundation)
 
+\pagebreak
 
 Skills
 ------
 
 Spoken languages
-:     german (mother tongue), english (fluent), spanish (basic)
+:     German (mother tongue), English (fluent), Spanish (basic)
 
 Programming languages
 :     Python, C++, Cython, Julia
 
 Software Packages
-:     MS Office/Libre Office, LaTeX, revision control software (SVN, git, mercurial), painting and graphics software (Gimp, Inkscape), machine learning tools (scikit-learn, caffe, theano, WEKA)
+:     MS Office/Libre Office, LaTeX, revision control software (SVN, git, mercurial), painting and graphics software (Gimp, Inkscape), machine learning tools (scikit-learn, caffe, theano), computer vision (scikit-image, OpenCV)
 
 Research Foci
 -----------------
 
 Robot Control Learning
-:    I have developed and extended methods from the domain of reinforcement learning ([relevant publications](http://www.informatik.uni-bremen.de/~jhm/publications/class_rescat.html#Reinforcement%20Learning)) and evolutionary computation ([relevant publications](http://www.informatik.uni-bremen.de/~jhm/publications/class_rescat.html#Neuroevolution)) for learning behaviors of mobile robots. In particular, developing methods for decomposing complex problems into simpler subproblems and developing learning algorithms which combine policy search with active and multi-task learning have been foci of my work. This work was conducted in the project [BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html). 
+:    I am developing and extending methods from the domain of reinforcement learning ([relevant publications](http://www.informatik.uni-bremen.de/~jhm/publications/class_rescat.html#Reinforcement%20Learning)) and evolutionary computation ([relevant publications](http://www.informatik.uni-bremen.de/~jhm/publications/class_rescat.html#Neuroevolution)) for learning locomotion and manipulation behaviors of mobile robots. In particular, developing methods for decomposing complex problems into simpler subproblems and developing learning algorithms which combine policy search with active and multi-task learning have been foci of my work. This work is conducted in the project [BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html).
 
 BCIs
-:    My work in Brain Computer Interfaces (BCIs) was focused on using supervised machine learning techniques to detect event-related potentials in a human's electroencephalogram (EEG) that indicate that the human has perceived and recognized important messages that have been presented to him or that he intends to execute a movement shortly. My work in the [VI-Bot](http://robotik.dfki-bremen.de/en/research/projects/vi-bot.html) and [IMMI](http://robotik.dfki-bremen.de/en/research/projects/immi.html) projects was focused mainly on developing supervised learning algorithms that allow detecting these ERPs with a minimum amount of labeled training data from the current user by reusing data from historic sessions of the same and other users. [Relevant publications](http://www.informatik.uni-bremen.de/~jhm/publications/class_rescat.html#Brain%20Computer%20Interface)
+:    My work in Brain Computer Interfaces (BCIs) was focused on using supervised machine learning techniques to detect certain patterns in a human's electroencephalogram (EEG) that indicate that the human has perceived and recognized important messages that have been presented to him or that he intends to execute a movement shortly. My work in the [VI-Bot](http://robotik.dfki-bremen.de/en/research/projects/vi-bot.html) and [IMMI](http://robotik.dfki-bremen.de/en/research/projects/immi.html) projects was focused mainly on developing supervised learning algorithms that allow detecting these patterns with a minimum amount of labeled training data from the current user by reusing data from historic sessions of the same and other users. [Relevant publications](http://www.informatik.uni-bremen.de/~jhm/publications/class_rescat.html#Brain%20Computer%20Interface)
 
 Biomedical Pattern Recognition
-:    More currently, within the project [Cascade](http://robotik.dfki-bremen.de/en/research/projects/cascade-1.html), we have applied oversegmentation and supervised machine learning approaches to detect aortic calcifications and bifurcations in  intravascular ultrasound (IVUS) and data.
+:    Identifying patterns in biomedical data has been one focus of my work. Besides the work on BCIs, I have also developed novel graph-based methods for the matching of anatomical trees of liver and lung extracted from medical images recorded using CT and MRI, which allows registration of several medical images of the same organ that have been recorded using different modalities or at different points in time ([relevant publications](http://www.informatik.uni-bremen.de/~jhm/publications/class_rescat.html#Graph%20Matching%20)). More currently, within the project [Cascade](http://robotik.dfki-bremen.de/en/research/projects/cascade-1.html), we have applied oversegmentation and supervised machine learning approaches to detect aortic calcifications and bifurcations in intravascular ultrasound (IVUS) and CT recordings.
 
 Deep Learning
-:    Together with colleagues, I am currently investigating how graspable objects can be identified and how suitable grasp poses for robotic manipulators can be detected based on applying methods from the field of deep learning to RGB-D camera data. 
+:    Together with colleagues, I am currently investigating how graspable objects can be detected and how suitable grasp poses for robotic manipulators can be detected based on applying methods from the field of deep learning to RGB-D data. For this, candidate regions in images which may contain objects are first generated using a heuristic and each of these regions is then classified using a deep neural network into different object categories. Another neural network is used to classify different grasp pose candidates for the detected objects into feasible and not feasible for a robotic gripper.
 
 Scientific Publications
 -----------------------
@@ -128,17 +129,22 @@ Industry Projects
 -----------------
 
 12/2007 - 02/2008
-:      PAHMIR: Application of time series analaysis and machine learning for failure prediction (for Airbus Deutschland GmbH)
+:      PAHMIR: Application of time series analysis and machine learning for failure prediction (for Airbus Deutschland GmbH)
 
 Talks
 -----
 
 10/2015
-:      "(Deep) Machine Learning - An Introduction, Soft- and Hardware Frameworks and Applications", 6. Tag der Sofwareentwicklung, Audi Electronics Venture GmbH  
+:      "(Deep) Machine Learning - An Introduction, Soft- and Hardware Frameworks and Applications", 6. Tag der Sofwareentwicklung, Audi Electronics Venture GmbH
 
 05/2015
-:    Organizer and Lecturer of [Robocademy Course "NT3 – Machine Learning for Autonomous Robots"](http://www.robocademy.eu/en/training/network-courses/nt3-machine-learning-for-autonomous-robots.html)
+:    Organizer and Lecturer of [Robocademy Course "NT3 – Machine Learning for Autonomous Robots"](http://www.robocademy.eu/en/training/network-courses/nt3-machine-learning-for-autonomous-robots.html). Given a lecture on "Reinforcement Learning" for a class of 15 PhD students from different European countries; organized four lectures and four exercises on different areas of supervised, unsupervised, and reinforcement learning.
 
+\pagebreak
+
+\pagebreak
+
+\pagebreak
 
 Open Source Software
 --------------------
@@ -146,9 +152,9 @@ Open Source Software
 I regularly contribute to open source machine learning software in the following projects:
 
 [BOLeRo](http://robotik.dfki-bremen.de/de/forschung/softwaretools/bolero.html)
-:    **Core contributor**. BOLeRo provides tools to learn behaviors for robots. That includes behavior representations as well as reinforcement learning, black-box optimization, and evolutionary algorithms and imitation learning. It provides a C++ and a Python interface to be efficient where this is required and to be flexible and convenient where performance is not an issue. Because the library provides a C++ interface, it is easy to integrate in most robotic frameworks, e.g. the robot operating system (ROS) or the robot construction kit (Rock). 
+:    **Core contributor**. BOLeRo provides tools to learn behaviors for robots. That includes behavior representations as well as reinforcement learning, black-box optimization, and evolutionary algorithms and imitation learning. It provides a C++ and a Python interface to be efficient where this is required and to be flexible and convenient where performance is not an issue. Because the library provides a C++ interface, it is easy to integrate in most robotic frameworks, e.g. the robot operating system (ROS) or the robot construction kit (Rock).
 
-[scikit-learn](http://scikit-learn.org/stable/) 
+[scikit-learn](http://scikit-learn.org/stable/)
 :    **Contributor**. scikit-learn is the de-facto standard tool for machine learning in the scientific Python tool stack. It is widely used in academia and industry. I have contributed tools for [probability calibration of classifiers](http://scikit-learn.org/stable/modules/calibration.html) and for [kernel ridge regression](http://scikit-learn.org/stable/modules/kernel_ridge.html) to scikit-learn. Moreover, I have written a complete redesign of the Gaussian process module in this [pull request](https://github.com/scikit-learn/scikit-learn/pull/4270), which will most likely be contained in version 0.18 of scikit-learn.
 
 [pySPACE](http://pyspace.github.io/pyspace/)
@@ -159,7 +165,7 @@ I regularly contribute to open source machine learning software in the following
 
 
 Scientific Community
--------------------- 
+--------------------
 
 2015
 :    Reviewer of the [Artificial Intelligence](http://www.journals.elsevier.com/artificial-intelligence) journal
@@ -249,7 +255,7 @@ ongoing
 :     Minimierung und Untersuchung des Simulation-Reality-Gaps anhand eines BRIO Labyrinth-Spiels
 
 02/2009
-:     Combination of the neuroevolutionary method EANT with Q-Learning and CMA-ES 
+:     Combination of the neuroevolutionary method EANT with Q-Learning and CMA-ES
 
 Bachelor theses:
 
