@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<?xml-stylesheet type="text/xsl" href="trans_ex1.xsl"?>
+
+<list_papers_by_date
+  xmlns:b2h="http://www.cs.cmu.edu/~pfr/misc_software/index.html#bib2html"
+  xmlns="http://www.cs.cmu.edu/~pfr/misc_software/index.html#bib2html"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cs.cmu.edu/~pfr/misc_software/index.html#bib2html ./bib2html.xsd">
+
+<main_index_links>
+  <index_link>
+   <name>Sorted by Date</name>
+   <url>sort_date.html</url>
+  </index_link>
+  <index_link>
+   <name>Classified by Publication Type</name>
+   <url>class_type.html</url>
+  </index_link>
+  <index_link>
+   <name>Classified by Research Category</name>
+   <url>class_rescat.html</url>
+  </index_link>
+</main_index_links>
+
+
+<list_title>
+Sorted by Date
+</list_title>
+
+
+
+<generation_info>
+ <program>bib2html</program>
+ <program_url>http://www.cs.cmu.edu/~pfr/misc_software/index.html#bib2html</program_url>
+ <author>Patrick Riley</author>
+ <author_url>http://www.cs.cmu.edu/~pfr</author_url>
+ <datetime>2003-02-16T22:00:00-05:00</datetime>
+</generation_info>
+
+<list_group_papers>
+ <group_papers>
+  <group_title>2003</group_title>
+
+  <paper_info>
+   <title>Integration of Advice in an Action-Selection
+   Architecture</title>
+   <citation>Paul Carpenter, Patrick Riley, Manuela Veloso, and Gal
+   Kaminka. Integration of Advice in an Action-Selection
+   Architecture. In Gal A. Kaminka, Pedro U. Lima, and Raul Rojas,
+   editors, RoboCup-2002: The Fifth RoboCup Competitions and
+   Conferences, Springer Verlag, Berlin, 2003. (to appear)</citation>
+   <download_links>
+    <download_entry>
+     <file_format>pdf</file_format>
+     <url>./INTEG.pdf</url>
+     <size> 12 </size>
+     <exists>1</exists>
+    </download_entry>
+    <download_entry>
+     <file_format>ps.gz</file_format>
+     <url>./INTEG.ps.gz</url>
+     <size> 68000 </size>
+     <exists>true</exists>
+    </download_entry>
+   </download_links>
+   <detail_url>testdetail.html</detail_url>
+  </paper_info>
+
+  <paper_info>
+   <title>MPADES: Middleware for Parallel Agent Discrete Event Simulation</title>
+   <citation>Patrick Riley. MPADES: Middleware for Parallel Agent Discrete Event Simulation. In Gal A. Kaminka, Pedro U. Lima, and Raul Rojas, editors, RoboCup-2002: The Fifth RoboCup Competitions and Conferences, Springer Verlag, Berlin, 2003. (to appear)</citation>
+   <download_links>
+    <download_entry>
+     <file_format>pdf</file_format>
+     <url>./MPADES.pdf</url>
+     <size> 12 </size>
+     <exists>0</exists>
+    </download_entry>
+    <download_entry>
+     <file_format>ps.gz</file_format>
+     <url>./MPADES.ps.gz</url>
+     <size> 68000 </size>
+     <exists>true</exists>
+    </download_entry>
+   </download_links>
+   <!-- <detail_url>testdetail.html</detail_url> -->
+  </paper_info>
+
+ </group_papers>
+
+ <group_papers>
+  <group_title>2002</group_title>
+
+  <paper_info>
+   <title>ChaMeleons-01 Team Description</title>
+   <citation>Paul Carpenter, Patrick Riley, Gal Kaminka, Manuela Veloso, Ignacio Thayer, and Robert Wang. ChaMeleons-01 Team Description. In Andreas Birk, Silvia Coradeschi, and Satoshi Tadokoro, editors, RoboCup-2001: Robot Soccer World Cup V, Springer, Berlin, 2002.</citation>
+   <download_links>
+    <download_entry>
+     <file_format>pdf</file_format>
+     <url>./TD.pdf</url>
+     <size> 12 </size>
+     <exists>1</exists>
+    </download_entry>
+    <download_entry>
+     <file_format>ps.gz</file_format>
+     <url>./TD.ps.gz</url>
+     <size> 68000 </size>
+     <exists>false</exists>
+    </download_entry>
+   </download_links>
+   <detail_url>AIPS02-STN.html</detail_url>
+  </paper_info>
+  
+ </group_papers>
+
+</list_group_papers>
+
+</list_papers_by_date>

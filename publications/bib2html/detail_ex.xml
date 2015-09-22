@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<?xml-stylesheet type="text/xsl" href="trans_ex1.xsl"?>
+
+<paper_detail 
+  xmlns:b2h="http://www.cs.cmu.edu/~pfr/misc_software/index.html#bib2html"
+  xmlns="http://www.cs.cmu.edu/~pfr/misc_software/index.html#bib2html"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.cs.cmu.edu/~pfr/misc_software/index.html#bib2html ./bib2html.xsd">
+
+<main_index_links>
+  <index_link>
+   <name>Sorted by Date</name>
+   <url>sort_date.html</url>
+  </index_link>
+  <index_link>
+   <name>Classified by Publication Type</name>
+   <url>class_type.html</url>
+  </index_link>
+  <index_link>
+   <name>Classified by Research Category</name>
+   <url>class_rescat.html</url>
+  </index_link>
+</main_index_links>
+
+<paper_info>
+
+<title>
+MPADES: Middleware for Parallel Agent Discrete Event
+Simulation
+</title>
+
+<citation>
+<![CDATA[
+Patrick Riley. MPADES: Middleware for Parallel Agent Discrete Event
+Simulation. In Gal A. Kaminka, Pedro U. Lima, and Raul Rojas, editors,
+<i>RoboCup-2002: The Fifth RoboCup Competitions                  and
+Conferences</i>, Springer Verlag, Berlin, 2003. (to appear)<br /> Won a
+<b>RoboCup Engineering Award</b>  
+]]>
+</citation>
+
+<download_links>
+  <download_entry>
+   <file_format>pdf</file_format>
+   <url>./LNAI02-mpades.pdf</url>
+   <size> 0 </size>
+   <exists>0</exists>
+  </download_entry>
+  <download_entry>
+   <file_format>ps.gz</file_format>
+   <url>./LNAI02-mpades.ps.gz</url>
+   <size> 68000 </size>
+   <exists>true</exists>
+  </download_entry>
+</download_links>
+
+<abstract>
+<![CDATA[
+Simulations are an excellent tool for studying
+artificial intelligence. However, the simulation
+technology in use by and designed for the artificial
+intelligence community often fails to take advantage
+of much of the work by the larger simulation
+community to produce stable, repeatable, and
+efficient simulations. We present the new system
+Middleware for Parallel Agent Discrete Event
+Simulation (MPADES) as a simulation substrate for                  the
+artificial intelligence community. MPADES                  focuses on
+the agent as a fundamental simulation                  component. The
+``thinking time'' of an agent is                  tracked and
+reflected in the results of the agents'
+actions. MPADES supports and manages the                  distribution
+of agents across machines while being                  robust to
+variations in network performance and                  machine
+load. We present the system in detail and                  give
+experimental results for a simple world model                  and set
+of agents. MPADES is not tied to any                  particular
+simulation, and is a powerful new tool                  for creating
+simulations for the study of artificial
+intelligence. 
+]]>
+</abstract>
+
+<bibtex_entry>
+<![CDATA[
+@InCollection(LNAI02-mpades,
+  Author =	 "Patrick Riley",
+  Title =	 "{MPADES}: Middleware for Parallel Agent Discrete Event
+                  Simulation",
+  booktitle =	 "{R}obo{C}up-2002: The Fifth {R}obo{C}up Competitions
+                  and Conferences",
+  Editor =	 "Gal A. Kaminka and Pedro U. Lima and Raul Rojas",
+  Publisher =	 "Springer Verlag",
+  address =	 "Berlin",
+  year =	 2003,
+  wwwnote =	 {Won a <b>RoboCup Engineering Award</b>},
+  note =	 {(to appear)},
+  abstract =	 {Simulations are an excellent tool for studying
+                  artificial intelligence. However, the simulation
+                  technology in use by and designed for the artificial
+                  intelligence community often fails to take advantage
+                  of much of the work by the larger simulation
+                  community to produce stable, repeatable, and
+                  efficient simulations. We present the new system
+                  Middleware for Parallel Agent Discrete Event
+                  Simulation (MPADES) as a simulation substrate for
+                  the artificial intelligence community. MPADES
+                  focuses on the agent as a fundamental simulation
+                  component. The ``thinking time'' of an agent is
+                  tracked and reflected in the results of the agents'
+                  actions. MPADES supports and manages the
+                  distribution of agents across machines while being
+                  robust to variations in network performance and
+                  machine load. We present the system in detail and
+                  give experimental results for a simple world model
+                  and set of agents. MPADES is not tied to any
+                  particular simulation, and is a powerful new tool
+                  for creating simulations for the study of artificial
+                  intelligence. },
+  bib2html_pubtype = {Refereed Conference,Award Winner},
+  bib2html_rescat = {Simulation},
+)
+]]>
+</bibtex_entry>
+
+</paper_info>
+
+<generation_info>
+ <program>bib2html</program>
+ <program_url>http://www.cs.cmu.edu/~pfr/misc_software/index.html#bib2html</program_url>
+ <author>Patrick Riley</author>
+ <author_url>http://www.cs.cmu.edu/~pfr</author_url>
+ <datetime>2003-02-16T22:00:00-05:00</datetime>
+</generation_info>
+
+</paper_detail>

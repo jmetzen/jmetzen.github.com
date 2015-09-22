@@ -1,0 +1,311 @@
+This is the (minimal) documentation for the bib2html.pl script written
+by Patrick Riley (pfr@cs.cmu.edu). Please see the README for
+additional information.
+
+This script converts bibtex .bib file to a set of html pages.
+For example of what this looks like, see
+http://www.cs.cmu.edu/~pfr/publications/index.html
+
+I make no guaruntees or warranties about the use of this program. I
+hope you find it useful and I will try to help you fix stuff, but I
+can not take responsibility for this program working correctly for
+you. I can tell you that it works well for me, and I hope it will for
+you too. Please drop me a line at pfr@cs.cmu.edu if you find this
+software useful. 
+
+************************************
+USERS OF PREVIOUS VERSIONS
+
+If you used a pre 0.7 version, please note that the output routines
+have completely changed. XML intermediate files are now used rather
+than the template files. Upgrading will take a little effort on your
+part. I apologize for this incompatibility, but this improves the over
+functionality of the system
+
+************************************
+SETUP
+There are a couple of things you need to do to set this up for you.
+
+* Perl exec: The script looks in /usr/local/bin/perl5 for the perl to
+  use. You need at least perl version 5 to run this, but your perl
+  version may be located elsewhere. If you have a facilitized machine,
+  this should be correct.
+
+* You want to modify bib2html.conf, at least for the output directory.
+  There are comments in the file describing what the other things do.
+  Notably, you may want to edit author_urls.
+
+* You will want to modify the xsl translation file. You should
+  probably make a copy of trans_ex1.xsl. You should at least replace
+  my name with yours :-)
+  Also, please leave in the generation message to give credit to
+  bib2html!
+
+* In order to generate html from xml, you will need a XSL processor. 
+	Many modern machines already have xsltproc installed, which is one
+	possible XSL processor.
+	
+	You can also use saxon (version 6.xx, not 7.xx as 7.xx is for xsl
+  2.0) http://saxon.sourceforge.net/
+  If you are at CMU SCS running a facilitized machine, you can put
+  this in your depot.pref.local
+  path saxon /afs/cs/project/mam-3/depot-coll/saxon/6.5.2
+
+  If you download saxon yourself, you then have a couple of options.
+  You can uncomment this line (and modify for where the jar is) in the
+  bib2html.conf file
+  xsl_transform_cmdline: java -jar /usr/local/lib/saxon/saxon.jar -o %OUTFN %INFN %XSLFN
+  Or, you can make a one line script (which I call saxon) like I did
+  to  make running saxon easier.
+  #!/bin/sh
+  java -jar /usr/local/lib/saxon/saxon.jar ${1+"$@"}
+  Then you have to uncomment this line in bib2html.conf
+  xsl_transform_cmdline: saxon -o %OUTFN %INFN %XSLFN
+
+  In order to this whole thing run faster under Linux (saxon is java
+  based and starting up java repeatedly is slow), you may want to get
+  the saxonserver from
+  http://www.zvon.org/ZvonSW/saxonserver/Output/introduction.html If
+  you are at CMU SCS running a facilitized machine, you can put this
+  in your depot.pref.local path fastsaxon
+  /afs/cs/project/mam-3/depot-coll/fastsaxon/
+  You can then uncomment this line in bib2html.conf:
+  xsl_transform_cmdline: saxonclient -o %OUTFN %INFN %XSLFN
+  You will have to run a saxonserver (see the fastsaxon documentation)
+  before running bib2html.
+
+************************************
+HOW TO RUN IT
+
+Make sure you have followed the setup procedures above!
+
+example
+bib2html.pl file1.bib file2.bib
+
+You can specify as many bib files as you want on the command line.
+
+The script looks for bib2html.conf in the current directory for
+configuration parameters. Please see the bib2html.conf file for
+details about the available parameters. You can also specify
+additional conf files on the command line. Anything that ends in .conf
+is read as a configuration file, not a bib file.
+
+Bib2html will try to create hyperlinks in the generated HTML pages to the
+corresponding paper for each BibTeX entry. There are ways it can find the
+paper files. First, the script will look for a file named 'KEY.ps.gz' or
+'KEY.pdf' where KEY is created from the key value of the bibentry by
+removing all ':' and '+' characters. For example, in this entry
+
+@InCollection(LNAI02:mpades,
+  Author =	 "Patrick Riley")
+
+the file must be called LNAI02mpades.ps.gz. If this file doesn't exist, it
+will check if a file is specified in the local-url field (this is the field
+that another program called BibDesk uses to link BibTex entries to files).
+For example, in this entry
+
+@InCollection(LNAI02:mpades,
+  Author =	 "Patrick Riley"
+	Local-Url = "file://localhost/Users/mmoll/papers/riley02mpades.pdf"
+)
+
+it will link to the file /Users/mmoll/papers/riley02mpades.pdf. If you plan
+to use rsync to copy the generated html pages and links to another machine,
+make sure to use the "--copy-links" flag.
+
+
+************************************
+THE OUTPUT FILES
+
+bib2html can generate a number of different output files. 
+
+First, if the configuration option 'generate_detail_pages' is turned
+on, a file is generated for each bib entry. It (can) contain the
+abstract, bibtex entry, download information, and citation.
+
+Second, the configuration option 'generate_bibtex_files' controls
+whether a separate .bib file is created for each entry. See also the
+option 'bibtex_file_comments'.
+
+Third, the configuration option 'generate' controls what other files
+are generated. The value is a whitespace separated list where the
+valid elements are:
+* default: The entries are output in the order in which they were read
+  in.
+* date: The entries are sorted by date. Your XSL file can generate
+  links for each year (trans_ex1.xsl does this).
+* author: The entries are sorted by the first authors last name.
+* author_class: A class is created for every author (not just the
+  first). If the configuration value 'catlist_authors' is non-empty,
+  only authors with those names will appear on this page. The
+  format is like "Riley" or "Riley, Patrick", "Riley, P. F." etc.
+* author_class_2: Same as author_class, but uses the configuration
+  parameter 'catlist_authors_2'. See 
+  http://www-2.cs.cmu.edu/~coral/publications/class_author.html
+  for why you may want to do this:
+* pubtype: Classified by the publication types. The valid types are
+  specified by 'catlist_pubtype' and the publication type(s) for a
+  bibentry is determined by the bib2html_pubtype field (see the 'ABOUT
+  THE BIB FILE' section).
+* rescat: Classified by the research category. The valid types are
+  specified by 'catlist_rescat' and the research categories for a
+  bibentry is determined by the bib2html_rescat field (see the 'ABOUT
+  THE BIB FILE' section).
+* funding: Classified by the funding source. The valid types are
+  specified by 'catlist_funding' and the funding source for a bibentry is
+  determined by the bib2html_funding field (see the 'ABOUT THE BIB
+  FILE' section).
+* index: A page which just contains links to the other generated pages.
+
+Each type also has an associated configuration option for controlling
+the title of the page. The option is name is the element with '_title'
+appended. For example, the 'date' file will be given the title
+specified by 'date_title'. This affects both the title on the page and
+the name given to the links between the pages.
+
+************************************
+ABOUT THE BIB FILE
+
+I can't guarantee that my bib file parsing is perfect. It can handle
+either "" or {} as the field delimiter. It also handles @string
+replacements; it only does the replacement if the word is
+undelimited. For example, in this file:
+@string(foo, "This is a test")
+...
+   booktitle = foo,
+foo is replaced by "This is a test", but in this file:
+@string(foo, "This is a test")
+@InProceedings(
+...
+   booktitle = {foo},
+it is not.
+
+Some semi-standard and non-standard fields have to be added to the bib
+file in order for all the files to be generated correctly
+
+* field: abstract
+  The abstract will be put into the detailed page about the
+  publication (if it exists).
+
+* field: wwwnote
+  The contents of this (which could be HTML) are added to the end of
+  the citation entry (if it exists).
+
+* field: bib2html_extra_info
+  The contents of this field (which could be HTML) are put into the
+  <extra_info> element of the paper info. This is intended for longer
+  information than what is in wwwnote. This is useful for noting
+  clarifications and conference/journal versions of papers. In the
+  example xsl files, this information is printed only in the paper
+  detail page.
+
+* field: bib2html_pubtype
+  The publication type. Check out
+  /afs/cs/user/pfr/references/bib/riley.bib for the categories that I
+  use. 
+
+* field: bib2html_rescat
+  The research category. Check out
+  /afs/cs/user/pfr/references/bib/riley.bib for the categories that I
+  use. 
+  You will almost certainly need to come up with the categories that
+  make sense for your research.
+
+* field: bib2html_funding
+  The funding source. Used only if you generate a classified by
+  funding page.
+
+* field bib2html_dl_pdf, bib2html_dl_ps, bib2html_dl_psgz, bib2html_dl_html
+  These fields give a url for pdf, ps and ps.gz files of the
+  papers. These fields are only checked if a local copy of the file
+  can not be found.
+
+ALL of these field names are configurable with the options: 
+bibfield_abstract, bibfield_wwwnote, bibfield_extra_info,
+bibfield_pubtype, bibfield_rescat, bibfield_funding, bibfield_dl_pdf,
+bibfield_dl_ps, bibfield_dl_psgz, bibfield_dl_html
+
+Classification Ordering
+
+For a categorization of the files (by publication type for example),
+you have to specify in what order the categories should appear on the
+page. There are conf file options for this. See the bib2html.conf file
+for an example.
+
+\btohremove
+Anything you put inside of a \btohremove{} will be removed before
+formatting for the web page. You should then include 
+\newcommand{\btohremove}[1]{#1} in your tex documents that use bib
+entries with this command.
+
+Handling name suffixes
+If author names have suffixes like Jr., Sr., etc, then you need to use
+~ as the seprator between the last name and the suffix, e.g.
+Patrick Riley,~Jr.
+If you don't do this, then bib2html will interpret Jr. as the last
+name.
+Note that you should not use ~ in names in any other way.
+
+************************************
+DUPLICATE REMOVAL
+
+If the configuration option merge_duplicates is set to 1, then
+bib2html attempts to locate and merge duplicates. 
+
+Two bib entries are considered duplciates if:
+* Their types (InProceedings, Article, TechReport, etc) are the same.
+* Their canonicalized titles are the same. Titles are canonicalized by
+  removing all characters '{}-:;.', reducing whitespace to a single
+  space, and making everything lowercase.
+* Their years are the same.
+
+If two entries are duplicates, they are merged as follows.
+* Whichever entry has more fields is considered the better entry.
+* If there are any fields in the worse entry which are not in the
+  better entry, they are added.
+
+All alternate keys used for an entry are remembered, and an
+appropriate file with any of the key names is used for a download
+link.
+
+************************************
+THE XSL STYLESHEET FILE
+
+The file specified by the xsl_fn parameter should be an XSL stylesheet
+specifying how to format/transform the XML into HTML. XSL is an
+extremely powerful transformation language.
+
+You should create your own XSL file to use for formatting your
+output. When bib2html is updated, you should in general not have to
+change your stylesheet. The XSL should be fairly easy to pattern match
+off of to make minor changes, as long as you have a basic
+understanding of XML.
+
+I personally combine the output with a CSS (cascading style
+sheet), but you could do everything in the XSL if you want.
+
+Whatever changes you make, please do format the <generation_info>
+element reasonably to give credit to bib2html.
+
+Also, I would be interested in collecting examples of stylesheets. If
+you make interesting modifications, please send me the style sheet
+with a web pointer to where everyone can see the output (if
+available). My contact info is below.
+
+If you need some help getting started with XSL, here is the page I
+learned from, which is pretty good all in all. 
+http://www.w3schools.com/xsl/default.asp
+Namespaces are the trickiest part of getting XSL right, so try
+adding/removing a 'b2h:' if things aren't working like you expect.
+
+
+************************************
+HOW TO CONTACT ME
+
+I welcome your comments, questions, suggestions, complaints, and
+especially patches to make this program work better. Feel free to
+contact me.
+
+Patrick Riley
+pfr@cs.cmu.edu
+http://www.cs.cmu.edu/~pfr

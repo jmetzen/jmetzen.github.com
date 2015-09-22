@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:b2h="http://www.cs.cmu.edu/~pfr/misc_software/index.html#bib2html"
+  targetNamespace="http://www.cs.cmu.edu/~pfr/misc_software/index.html#bib2html"
+  attributeFormDefault="qualified"
+  elementFormDefault="qualified">
+
+<!-- First types that we may want to resuse -->
+<xs:simpleType name="url_type">
+ <xs:restriction base="xs:string" />
+</xs:simpleType>
+
+<!-- Now we define some element which will be used -->
+
+<xs:element name="size">
+ <xs:simpleType>
+  <xs:restriction base="xs:nonNegativeInteger" />
+ </xs:simpleType>
+</xs:element>
+
+<xs:element name="citation">
+ <xs:simpleType>
+  <xs:restriction base="xs:string" />
+ </xs:simpleType>
+</xs:element>
+
+<xs:element name="file_format">
+ <xs:simpleType>
+  <xs:restriction base="xs:token">
+    <xs:enumeration value="pdf" />
+    <xs:enumeration value="ps" />
+    <xs:enumeration value="ps.gz" />
+    <xs:enumeration value="html" />
+  </xs:restriction>
+ </xs:simpleType>
+</xs:element>
+
+<xs:element name="index_link">
+ <xs:complexType>
+  <xs:all>
+   <xs:element name="url" type="b2h:url_type"/>
+   <xs:element name="name" type="xs:string"/>
+  </xs:all>
+ </xs:complexType>
+</xs:element>
+
+<xs:element name="main_index_links">
+ <xs:complexType>
+  <xs:sequence>
+   <xs:element ref="b2h:index_link" minOccurs="0" maxOccurs="unbounded"/>
+  </xs:sequence>
+ </xs:complexType>
+</xs:element>
+
+<xs:element name="download_entry">
+ <xs:complexType>
+  <xs:all>
+   <xs:element ref="b2h:file_format" />
+   <xs:element name="url" type="b2h:url_type" minOccurs="0" />
+   <xs:element ref="b2h:size" minOccurs="0" />
+   <xs:element name="exists" type="xs:boolean" />
+  </xs:all>
+ </xs:complexType>
+</xs:element>
+
+<xs:element name="download_links">
+ <xs:complexType>
+  <xs:sequence>
+   <xs:element ref="b2h:download_entry" minOccurs="0" maxOccurs="unbounded"/>
+  </xs:sequence>
+ </xs:complexType>
+</xs:element>
+
+<xs:element name="generation_info">
+ <xs:complexType>
+  <xs:all>
+   <xs:element name="program" type="xs:string" />
+   <xs:element name="program_url" type="b2h:url_type" />
+   <xs:element name="author" type="xs:string" />
+   <xs:element name="author_url" type="b2h:url_type" />
+   <xs:element name="datetime" type="xs:dateTime" />
+  </xs:all>
+ </xs:complexType>
+</xs:element>
+
+<xs:element name="group_papers">
+ <xs:complexType>
+  <xs:sequence>
+   <xs:element name="group_title" type="xs:string" minOccurs="0"/>
+   <xs:element ref="b2h:paper_info" minOccurs="1" maxOccurs="unbounded" />
+  </xs:sequence>
+ </xs:complexType>
+</xs:element>
+
+<xs:element name="list_group_papers">
+ <xs:complexType>
+  <xs:sequence>
+   <xs:element ref="b2h:group_papers" minOccurs="1" maxOccurs="unbounded" />
+  </xs:sequence>
+ </xs:complexType>
+</xs:element>
+
+<xs:element name="paper_info">
+ <xs:complexType>
+  <xs:all>
+   <xs:element name="title" type="xs:string"/>
+   <xs:element ref="b2h:citation" />
+   <xs:element ref="b2h:download_links" />
+   <xs:element name="abstract" type="xs:string" minOccurs="0" />
+   <xs:element name="bibtex_entry" type="xs:string" minOccurs="0" />
+   <xs:element name="detail_url" type="b2h:url_type" minOccurs="0" />
+  </xs:all>
+ </xs:complexType>
+</xs:element>
+
+<!-- Now back to some type which we can reuse -->
+
+<xs:complexType name="list_papers_type">
+ <xs:all>
+  <xs:element ref="b2h:main_index_links" />
+  <xs:element name="list_title" type="xs:string"/>
+  <xs:element ref="b2h:generation_info" />
+  <xs:element ref="b2h:list_group_papers" />
+ </xs:all>
+</xs:complexType>
+
+
+<!-- Now the main root element types -->
+
+<xs:element name="paper_detail">
+ <xs:complexType>
+  <xs:all>
+   <xs:element ref="b2h:main_index_links" />
+   <xs:element ref="b2h:paper_info" />
+   <xs:element ref="b2h:generation_info" />
+  </xs:all>
+ </xs:complexType>
+</xs:element>
+
+<xs:element name="main_index_page">
+ <xs:complexType>
+  <xs:all>
+   <xs:element ref="b2h:main_index_links" />
+   <xs:element ref="b2h:generation_info" />
+  </xs:all>
+ </xs:complexType>
+
+</xs:element>
+
+<!-- We use different names here to make it easy for a style sheet to do different
+     things with the different types of pages -->
+
+<xs:element name="list_papers_by_default" type="b2h:list_papers_type" />
+<xs:element name="list_papers_by_date" type="b2h:list_papers_type" />
+<xs:element name="list_papers_by_author" type="b2h:list_papers_type" />
+<xs:element name="list_papers_by_pubtype" type="b2h:list_papers_type" />
+<xs:element name="list_papers_by_rescat" type="b2h:list_papers_type" />
+<xs:element name="list_papers_by_funding" type="b2h:list_papers_type" />
+
+</xs:schema>

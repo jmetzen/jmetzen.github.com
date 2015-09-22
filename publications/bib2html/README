@@ -1,0 +1,38 @@
+This directory contains the files to generate html pages from a bibtex file.
+
+I make no guaruntees about the quality of this software, please use at
+your own risk. That being said, I wrote this because I wanted to use
+it and it's working fine for me. Please let me know if you have
+problems, complaints, or suggestions.
+
+Please see the file directions.txt for installation instructions and
+other explanations.
+
+Files:
+README          : You're reading it
+BUGS            : List of known bugs
+COPYRIGHT       : The copyright notice
+LICENSE         : The license for the software.
+NEWS            : Description of the changes between releases
+TODO            : My list of things that still need to be done
+directions.txt  : A text file with some basic introduction to how this
+                  works
+bib2html.pl     : The main program perl script
+ConfFileParser.pm: A little perl module that I wrote for configuration file parsing
+bib2html.conf   : A configuration file describing what and how to generate
+bib2html.xsd    : The XML schema for the XML output of bib2html.pl
+external/       : XSL files from elsewhere (that I did not write)
+detail_ex.xml
+listdate_ex.xml : These are examples of what the intermediate XML
+                  output looks like.
+trans_ex1.xsl   : An example XSL stylesheet for transforming the sml
+                  to html
+
+
+Patrick Riley
+pfr@cs.cmu.edu
+
+
+
+
+

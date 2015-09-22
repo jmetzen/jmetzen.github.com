@@ -1,0 +1,97 @@
+body {
+  color:#000000;
+  background-color:#ffffff;
+  margin:0px;
+  padding:0px;
+  font-family: geneva, helvetica, sans-serif;
+}
+
+h2 {
+  font-size: x-large;
+  font-style: italic;
+  font-family: times, serif;
+  margin: 12px 0px 5px 0px;
+  padding: 0px;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #000000;
+  color: #000000;
+}
+
+p {
+  font-family: geneva, helvetica, sans-serif;
+  padding:1em 0px 2px 2em;
+}
+
+p.citation {
+  text-indent: -1em;
+  padding:0px 0px 4px 3em;
+}
+
+p.abstract {
+  font-style: italic;
+  padding: 0px 2em 2px 2em;
+}
+
+ul { margin: 0px 0px 2px 0px; padding-left: 3.5em; }
+
+.content>p {margin:0px;}
+
+
+a:link {
+  font-family:geneva, helvetica, sans-serif;
+  font-weight:600;
+  text-decoration:none;
+  color:#e00000;
+}
+a:visited {
+  font-family:geneva, helvetica, sans-serif;
+  font-weight:600;
+  text-decoration:none;
+  color:#900000;
+}
+a:hover {
+  text-decoration: underline;
+  background-color:#f0f0f0;
+  color:#ff0000;
+}
+  
+img.pic {
+  vertical-align: top;
+  margin-top: 75px;
+  right: 90px;
+  z-index: 1;
+}
+  
+a img {
+  border: 0px;
+}
+
+/* All the content boxes belong to the content class. */
+.content {
+  /* Position is declared "relative" to gain control of stacking order
+     (z-index). */ 
+  position:relative; 
+  width:auto;
+  min-width: 310px;
+  margin:10px 10px 10px 10px;
+  /* This allows the content to overlap the right menu in narrow windows in
+     good browsers. */ 
+  z-index:3; 
+}
+
+.nav {
+  text-align: right;
+  margin-right: 100px;
+}
+
+div.nav a:hover {
+  background-color:#ffffff;
+  border: solid #d00000;
+  border-bottom-width: 1px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-top-width: 0px;
+  padding-bottom: 2px;
+}
+

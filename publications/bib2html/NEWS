@@ -1,0 +1,288 @@
+0.94
+  * textsc{} entries are now replaced with appropriate html (Thanks to
+    Mark Moll)
+
+0.93
+  * \% in bib entries becomes % in xml/html (Thanks to Mark Moll)
+
+0.92
+  * abs_path is no longer used. This was causing bib2html to hang for
+    a long time when the scriptdir was in AFS. Most people will not
+    notice this change at all.
+
+0.91
+  * \_ is now replaced with _ in the output. (Thanks to Mark Moll)
+  * Changed handling of ~ in author names. If author names have
+    suffixes like Jr., Sr., etc, then you need to use ~ as the
+    seprator between the last name and the suffix, e.g.  
+    Patrick Riley,~Jr.
+    If you don't do this, then bib2html will interpret Jr. as the last
+    name. Note that you should not use ~ in names in any other way.
+    (Thanks to Mark Moll)
+  * trans_ex2.xsl has been updated to handle acents and other special
+    html characters in classified by author pages.
+  * The contents of the bib2html_extra_info field is no longer put
+    through the standard tex to html replacements and output escaping
+    is disable for the two translation examples.
+  * Previously, if you used the accent \" in a bibtex field delimited
+    with ", bib2html would fail parsing. Now any " preceded by \ is
+    not considered the end of the field. (Thank you to Mark Moll for
+    bringing this to my attention)
+  * InCollection now has the "number" field (if it exists) in the
+    citation.
+  * A warning is printed if an entry is lacking both author and editor
+    fields (which will probably cause bib2html to exit)
+  * The return values of the programs which do the verification and
+    transformation of the xml files are now checked. The new options
+    xml_verify_exp_ret and xsl_transform_exp_ret give their expected
+    values. The default of 0 should be fine for almost any program.
+  * Added three new parameters: catlist_rescat_ignored,
+    catlist_pubtype_ignored, catlist_funding_ignored
+    The values given are accepted as valid for the category (so no
+    warning is printed), but no output class is generated for anything
+    in this list.
+  * All the special bibtex fields that bib2html recognizes are
+    configurable with these new options: bibfield_abstract,
+    bibfield_wwwnote, bibfield_extra_info, bibfield_pubtype,
+    bibfield_rescat, bibfield_funding, bibfield_dl_pdf,
+    bibfield_dl_ps, bibfield_dl_psgz, bibfield_dl_html:
+    bib2html_dl_html (Thanks to Mark Moll for the suggestion)
+  * XML armoring for field has been improved (' " < >) are all
+    protected now. URLs are also armored. In particular, this means
+    that you can now use download URLs that include &
+    (Thanks to Mark Moll for pointing out this bug)
+  * If catlist_authors or catlist_authors_2 is empty, then a list of
+    all authors is used. This list is constructed by finding the most
+    general names used in the bib entries. For example, if I use both
+    "Patrick Riley" and "P. Riley" in my bib entries, then "P. Riley"
+    is used as the class name. Note that if I have "Patrick Riley",
+    "George Riley" and "Riley", everything will end up under just
+    "Riley".
+
+0.90
+  * Can now generate separate bib files for each paper (esp. useful if
+    you don't use detail pages). The option 'generate_bibtex_files'
+    controls whether this is done (default off). The multi-line option
+    'bibtex_file_comments' contains additional comment lines to put at
+    the top of each bib file (some comment lines giving attribution
+    are always added). 
+    The intermediate xml format has a 'bibtex_url' element in each
+    paper_info element if the bibtex file was generated.
+    Both example xsl files have been updated to use this.
+    Thank you to Ran El-Yaniv <rani@cs.Technion.AC.IL> for this
+    suggestion.
+  * trans_ex2.xsl was malformatted in the last release; fixed
+  * Now understand a new bibtex field bib2html_extra_info
+    The contents of this field (which could be HTML) are put into the
+    <extra_info> element of the paper info. This is intended for
+    longer information than what is in wwwnote. This is useful for
+    noting clarifications and conference/journal versions of
+    papers. In the example xsl files, this information is printed only
+    in the paper detail page.
+    Thank you to Ran El-Yaniv <rani@cs.Technion.AC.IL> for this
+    suggestion.
+  * The formatting (notable upper/lower case) for authors in the
+    classified by author pages is taken from the values specified in
+    the conf file.
+  * A new option has been added 'author_url'. This is a multi-line
+    option where you can provide a URL for an author. Everytime that
+    author name is in a citation, a link is created to the given
+    URL. Each line has the format
+    <name> | <url>
+    e.g.
+    Riley, Patrick     | http://www.cs.cmu.edu/~pfr
+    (note the last name, first name format)
+    The link creation is handled in the perl, not the XSL, so you have
+    no control over the formatting of the link. I know this is not
+    ideal, but it would require some reworking to move that to the
+    XSL. If you really need this, let me know and we can talk.
+    Thank you to Ran El-Yaniv <rani@cs.Technion.AC.IL> for this
+    suggestion.
+  * bib2html now correctly ignore bib lines beginning with @comment
+
+0.88
+  * It has been discovered that perl 5.8.0 does NOT work with bib2html
+    but 5.8.3 does (thank you to Hans Halvorson) 
+  * The classified by author pages (with the associated
+    catlist_authors and catlist_authors_2 parameters are now much
+    smarter about matching/generating author names. In particular,
+    names forms with more than just last name can now be used in those
+    parameters. bib2html generates a number of name forms for every
+    input author to try and match the name to the allowed list. The
+    name forms are of the form
+    <full last name>, <some full given names> <some initials>
+    e.g.
+    Riley, Patrick F.
+    Riley, P. 
+    Riley, P. F. 
+    Riley
+    This means that names like 'Riley, P.' can be used in the
+    catlist_authors parameter, which can help resolve ambiguity if you
+    have multiple people with the same last name. However, note that
+    if there is more information in the catlist_authors value than in
+    the bibentry, that bibentry will not be matched correctly. For example,
+    if I have 'Patrick Riley' in the bibentry and 'Riley, P. F.' in
+    catlist_authors, that entry will NOT be classified because
+    bib2html does not know if 'Patrick Riley' is the same as 'Riley,
+    P. F.' 
+  * Fixed test.bib (had some old formatting styles in it)
+  * trans_ex1.bib and trans_ex2.bib now handle
+    list_papers_by_author_class
+
+0.87
+  * Removed dependence on Time::Zone. Time zone information is no
+    longer included output html (in the generation date). I modified
+    the example translations like this to avoid mistaken time zone
+    information being printed.
+   <xsl:with-param name="pattern" select="'EEE MMM dd, yyyy HH:mm:ss zzz'" />
+   to
+   <xsl:with-param name="pattern" select="'EEE MMM dd, yyyy HH:mm:ss'" />
+   You should probably update your xsl in the same way.
+  * The abstract now gets html from tex markup applied to it (see next
+    change also).
+  * In the example XSL files, I removed otput escaping for the
+    abstract. This allows the formatting from 0.86 to be applied to
+    the abstract, but has the potential to create bad HTML if you have
+    characters like &, <, or > in your abstracts. If you do, you
+    probably don't want to make this change in your xsl:
+    <xsl:value-of select="b2h:paper_info/b2h:abstract"/> 
+    to
+    <xsl:value-of select="b2h:paper_info/b2h:abstract" disable-output-escaping="yes" /> 
+
+0.86
+  * {\it } and {\bf } formatting is correctly turned into html
+  * \url now turned into links (and \char"7E turned into ~)
+  * Warning about malformatted entry now includes key if it can
+  * Support for html versions of papers added. In order to make this
+    work, the URL for the detail page has been changed to include a
+    b2hd- in front of the file name. I realize this will break any
+    URLs that you have distributed. My workaround is to make a custom
+    error page like http://www-2.cs.cmu.edu/~pfr/publications/404.html
+    and put something like this in the .htaccess for the directory
+    with your publications (this assumes you are running Apache I
+    think): 
+    ErrorDocument 404 /~pfr/publications/404.html
+
+0.85
+  * Added support for \btohremove. Anything inside this command is
+    removed before formatting for the web pages. It can handle nested
+    {}, but they must be balanced. If remove_bib2html_fields is true,
+    then these are also removed for the output of the whole BibTeX
+    entry.
+  * Added option 'title_html_tag' (default empty). Gives an html tag
+    to put around the formatting of every title.
+
+0.84
+  * Added support for a bib2html_ignore field. If it exists and has
+    any true value, that entry is not processed. Thank you to Peter
+    Stone for this.
+  * Fixed a bug (reported by Peter Stone) on the use of ~ and '\ ' in
+    titles. The fix partially relies on changes in bib2html.pl, but
+    you may also need to change your XSL file. I have updated both the
+    example XSL files as follows. In the b2h:paper_detail, changed
+    this line: 
+  <h2> <xsl:value-of select="b2h:paper_info/b2h:title" /> </h2>
+    to this:
+  <h2> <xsl:value-of select="b2h:paper_info/b2h:title" disable-output-escaping="yes"/> </h2>
+    Basically, this allows the $nbsp; to get passed through correctly. 
+
+0.83
+  * Unfortunately, the previous fix didn't actually fix the bug (see
+    0.82). Now it really is fixed.
+
+0.82
+  * Fixed a problem (caused by the duplicate handling code) that
+    prevented key names with : or + in them from locating their
+    download files.
+
+0.81
+  * Added a catlist_author configuration option. If generating and
+    author_class page, only authors in this list are given
+    categories. If the list is empty, all authors are given categories.
+  * Added support for an author_class_2 file type which is like
+    author_class but uses the new catlist_authors_2 multi-line conf
+    option.
+  * Added conf options: default_title, date_title, author_title,
+    author_class_title, author_class_2_title, pubtype_title,
+    rescat_title, funding_title, index_title
+    These specify the titles of all of the pages.
+  * Added conf option suppress_classify_warnings (default 0) which
+    suppresses the warning about class values not being in the allowed
+    list.
+  * Added conf option merge_duplicates, which specifies to try and
+    merge duplicate entires. Details in directions.txt.
+  * Added conf option output_bibfile, which if non-empty specifies a
+    file to write all the bib entries used to generate the web pages
+    (in bibtex format). Notably, this is output after the merge of
+    bibtex entries.
+
+0.80
+  * Added some basic error checking on bib entries to avoid mysterious
+    warnings later.
+  * Class names are canonicalized to multiple spaces becoming one
+    space, both in the bib entries and in the .conf file entries.
+  * Added an author_class output file list type which outputs the
+    papers with the any author's last name as a classification
+    type. In order to get special characters printed correctly, you
+    may need to put disable-output-escaping="yes" in your xsl:value-of
+    elements of printing the group title.
+  * Sorting by first author last name was broken with the use of
+    ~. Fixed.
+  * Sorting by first author last name now puts in headers for internal
+    linking which you can use in your xsl file.
+  * Added a function (turned off by default) to write .bib files for
+    each first author. You can turn it on by editing the perl (see
+    create_files_from_class)
+  * Added support for multiple conf files. bib2html.conf is still read
+    first. Anything else on the command line that ends with .conf will
+    also be read as a conf file (and not read for bib entries).
+  * Added new classification type: bib2html funding produces a
+    "list_papers_by_funding" xml element which uses the categories
+    from the multiline conf "catlist_funding" and the
+    "bib2html_funding" element of the bib file entries.
+  * Added a quiet conf option to suppress all normal status output.
+  * Added a check for multiple entries with the same key.
+  * Added a status bar for reading bib files
+
+0.74
+  * Minor fix that papers without classification did not end up in the
+    Unspecified category
+  * ~ and '\\ ' becomes &nbsp; 
+  * is_str_in_list function was broken. This caused warnings not be
+    printed when categories not specified in the conf file were used.
+
+0.73
+  * Many more replacements for latin-1 character (like umlauts and
+    cedilla, etc.) (thanks to Mark Moll)
+
+0.72
+  * Do umlaut replacement (thanks to Oliver Obst)
+  * Added entried for @manual and @misc (thanks to Oliver Obst)
+  * If a local copy of the file can not be found, the field
+    bib2html_dl_EXT (where EXT is the file extension with . removed)
+    is checked. If this field exists, it is assumed to be a URL to
+    link for this version of the paper. (based on code from Oliver Obst)
+
+0.71
+  * (not ever publically released)
+  * Entries with space after @NAME were ignored. Fixed.
+  * String exansion was not always done if the name was uppercase
+  * Size templates fixed
+  * Thanks to Mark Moll, another xsl example
+  * bad attributes removed to generate valid html 4.01 transitional
+ 
+0.7
+  * (not ever publically released)
+  * This is an almost complete rewrite of the output
+    functions. bib2html.pl now produces xml which conforms to the
+    bib2html.xsd schema. An XSL file is then used to translate the XML
+    to HTML. This should allow you to perform all customization by
+    changing the xsl file, and not the bib2html.pl script. When
+    upgrading to this version, you will need to spent a little time
+    modifying the translation file to suit your needs.
+
+0.46
+  * Keys can now include '.'
+  * Field names can now include '-:.'
+  * Failed reading of an entry is now a warning, not an error
+
