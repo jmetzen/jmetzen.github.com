@@ -53,7 +53,7 @@ Education
 
 10/2001 - 07/2006
 :     **Diploma** in Computer Science, University Münster, Germany \
-      Grade: sehr gut (0.8) \
+      Grade: sehr gut \
       Thesis title ["Matching von Baumstrukturen in der medizinischen Bildverarbeitung"](https://jmetzen.github.io/publications/MetzenDA2006.pdf) \
       Advisor: Prof. Dr. Xiaoyi Jiang
 
@@ -159,7 +159,7 @@ I regularly contribute to open source machine learning software in the following
 :    **Core contributor**. BOLeRo provides tools to learn behaviors for robots. That includes behavior representations as well as reinforcement learning, black-box optimization, and evolutionary algorithms and imitation learning. It provides a C++ and a Python interface to be efficient where this is required and to be flexible and convenient where performance is not an issue. Because the library provides a C++ interface, it is easy to integrate in most robotic frameworks, e.g. the robot operating system (ROS) or the robot construction kit (Rock).
 
 [scikit-learn](http://scikit-learn.org/stable/)
-:    **Core contributor**. scikit-learn is the de-facto standard tool for machine learning in the scientific Python tool stack. It is widely used in academia and industry. I have contributed tools for [probability calibration of classifiers](http://scikit-learn.org/stable/modules/calibration.html) and for [kernel ridge regression](http://scikit-learn.org/stable/modules/kernel_ridge.html) to scikit-learn. Moreover, I have written a complete redesign of the Gaussian process module in this [pull request](https://github.com/scikit-learn/scikit-learn/pull/4270), which will most likely be contained in version 0.18 of scikit-learn.
+:    **Core contributor**. scikit-learn is the de-facto standard tool for machine learning in the scientific Python tool stack. It is widely used in academia and industry. I have contributed tools for [probability calibration of classifiers](http://scikit-learn.org/stable/modules/calibration.html) and for [kernel ridge regression](http://scikit-learn.org/stable/modules/kernel_ridge.html) to scikit-learn. Moreover, I have written a complete redesign of the Gaussian process module in this [pull request](https://github.com/scikit-learn/scikit-learn/pull/4270), which will be contained in version 0.18 of scikit-learn.
 
 [pySPACE](http://pyspace.github.io/pyspace/)
 :    **Core contributor**. pySPACE is a Signal Processing And Classification Environment (SPACE) written in Python interfacing to the user with YAML configuration files and enabling parallel process execution. pySPACE allows rapid specification, execution, and analysis of empirical investigations (short: benchmarking) in signal processing and machine learning. Besides the benchmarking way of executing pySPACE where you can evaluate your data with your own configuration of algorithms, the software also provides an on-line mode where you can directly execute signal processing as soon as you have the data in an on-line fashion. For more information, please refer to our [paper](http://www.frontiersin.org/neuroinformatics/10.3389/fninf.2013.00040/abstract) published in the research topic "Python in Neuroscience II" in the Frontiers in Neuroinformatics journal.
@@ -170,6 +170,9 @@ I regularly contribute to open source machine learning software in the following
 
 Scientific Community
 --------------------
+
+2015
+:    Reviewer of the [Journal of Medical Robotics Research](http://www.worldscientific.com/worldscinet/jmrr)
 
 2015
 :    Reviewer of the [Artificial Intelligence](http://www.journals.elsevier.com/artificial-intelligence) journal
