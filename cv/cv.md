@@ -53,7 +53,7 @@ Education
 
 10/2001 - 07/2006
 :     **Diploma** in Computer Science, University Münster, Germany \
-      Grade: sehr gut \
+      Grade: sehr gut (very good) \
       Thesis title ["Matching von Baumstrukturen in der medizinischen Bildverarbeitung"](https://jmetzen.github.io/publications/MetzenDA2006.pdf) \
       Advisor: Prof. Dr. Xiaoyi Jiang
 
@@ -173,6 +173,9 @@ Scientific Community
 
 2015
 :    Reviewer of the [Journal of Medical Robotics Research](http://www.worldscientific.com/worldscinet/jmrr)
+
+2015
+:    Scientific Program Committee of the [International Symposium on Intelligent Computing Systems](http://www.isics-symposium.org/)
 
 2015
 :    Reviewer of the [Artificial Intelligence](http://www.journals.elsevier.com/artificial-intelligence) journal
