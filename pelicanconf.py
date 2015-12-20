@@ -27,7 +27,6 @@ THEME = 'themes/pelican-octopress'
 
 # display items
 MENUITEMS = (
-    ('Home Page (work)', 'http://www.informatik.uni-bremen.de/~jhm/'),
     ('Archives', '/archives.html'),
 )
 DISPLAY_PAGES_ON_MENU = True
