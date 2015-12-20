@@ -95,6 +95,7 @@
 .highlight .nv { color: #19177C } /* Name.Variable */
 .highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
 .highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
 .highlight .mf { color: #666666 } /* Literal.Number.Float */
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
@@ -269,7 +270,7 @@ jQuery(document).ready(function($) {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Additional-Kernels-for-sklearn's-new-Gaussian-Processes">Additional Kernels for sklearn's new Gaussian Processes<a class="anchor-link" href="#Additional-Kernels-for-sklearn's-new-Gaussian-Processes">&#182;</a></h2><p>Starting from version 0.18 (already available in the post-0.17 master branch), scikit-learn will ship a completely revised <a href="http://scikit-learn.org/dev/modules/gaussian_process.html">Gaussian process module</a>, supporting among other things kernel engineering. While scikit-learn only ships the most <a href="http://scikit-learn.org/dev/modules/gaussian_process.html#kernels-for-gaussian-processes">common kernels</a>, the <a href="https://github.com/jmetzen/gp_extras">gp_extra</a> project contains some more advanced, non-standard kernels that can seamlessly be used with scikit-learn's <a href="http://scikit-learn.org/dev/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html#sklearn.gaussian_process.GaussianProcessRegressor">GaussianProcessRegressor</a>. The following kernels are included at the moment:</p>
+<p>Starting from version 0.18 (already available in the post-0.17 master branch), scikit-learn will ship a completely revised <a href="http://scikit-learn.org/dev/modules/gaussian_process.html">Gaussian process module</a>, supporting among other things kernel engineering. While scikit-learn only ships the most <a href="http://scikit-learn.org/dev/modules/gaussian_process.html#kernels-for-gaussian-processes">common kernels</a>, the <a href="https://github.com/jmetzen/gp_extras">gp_extra</a> project contains some more advanced, non-standard kernels that can seamlessly be used with scikit-learn's <a href="http://scikit-learn.org/dev/modules/generated/sklearn.gaussian_process.GaussianProcessRegressor.html#sklearn.gaussian_process.GaussianProcessRegressor">GaussianProcessRegressor</a>. The following kernels are included at the moment:</p>
 <ul>
 <li><a href="https://github.com/jmetzen/gp_extras/blob/0d0d22fc74825fd163143753e9de048cc68f7abf/gp_extras/kernels/kernels_non_stationary.py#L18">ManifoldKernel</a>: Non-stationary correlation model based on manifold learning. This non-stationary kernel consists internally of two parts: a mapping from the actual data space onto a manifold and a stationary kernel on this manifold. The mapping is realized by a neural network whose architecture can be specified externally. The parameters of this network are learned along with the length scales of the Gaussian process, typically such that the marginal likelihood or the posterior probability of the GP are maximized. Any common stationary kernel can then be used on top of this manifold.</li>
 <li><a href="https://github.com/jmetzen/gp_extras/blob/0d0d22fc74825fd163143753e9de048cc68f7abf/gp_extras/kernels/kernels_non_stationary.pyy#L201">LocalLengthScalesKernel</a>: Non-stationary kernel based on local smoothness estimates. This non-stationary correlation model learns internally point estimates of local smoothness using a second-level Gaussian Process. For this, it selects a subset of the training data and learns length-scales at this specific points. These length scales are generalized using the second-level Gaussian Process. Furthermore, global (isotropic or anisotropic) length scales are learned for both the top-level GP and the length-scale GP.</li>
@@ -421,6 +422,9 @@ sudo python setup.py install</code></pre>
     <h1>Recent Posts</h1>
     <ul id="recent_posts">
       <li class="post">
+          <a href="https://jmetzen.github.io/2015-12-20/naive_bees.html">Naive Bees Classifier for the The Metis Challenge</a>
+      </li>
+      <li class="post">
           <a href="https://jmetzen.github.io/2015-12-17/gp_extra.html">Additional Kernels for sklearn's new Gaussian Processes</a>
       </li>
       <li class="post">
@@ -431,9 +435,6 @@ sudo python setup.py install</code></pre>
       </li>
       <li class="post">
           <a href="https://jmetzen.github.io/2015-01-29/ml_advice.html">Advice for applying Machine Learning</a>
-      </li>
-      <li class="post">
-          <a href="https://jmetzen.github.io/2014-09-14/sparse_filtering.html">Unsupervised feature learning with Sparse Filtering</a>
       </li>
     </ul>
   </section>
@@ -449,7 +450,7 @@ sudo python setup.py install</code></pre>
 
   <section>
   <h1>Tags</h1>
-    <a href="https://jmetzen.github.io/tag/open-source.html">open source</a>,    <a href="https://jmetzen.github.io/tag/classification.html">classification</a>,    <a href="https://jmetzen.github.io/tag/unsupervised.html">unsupervised</a>,    <a href="https://jmetzen.github.io/tag/python.html">python</a>,    <a href="https://jmetzen.github.io/tag/gaussian-process.html">gaussian process</a>,    <a href="https://jmetzen.github.io/tag/feature-learning.html">feature learning</a>,    <a href="https://jmetzen.github.io/tag/machine-learning.html">machine-learning</a>,    <a href="https://jmetzen.github.io/tag/unsupervised-learning.html">unsupervised learning</a>,    <a href="https://jmetzen.github.io/tag/tutorial.html">tutorial</a>  </section>
+    <a href="https://jmetzen.github.io/tag/open-source.html">open source</a>,    <a href="https://jmetzen.github.io/tag/classification.html">classification</a>,    <a href="https://jmetzen.github.io/tag/unsupervised.html">unsupervised</a>,    <a href="https://jmetzen.github.io/tag/python.html">python</a>,    <a href="https://jmetzen.github.io/tag/gaussian-process.html">gaussian process</a>,    <a href="https://jmetzen.github.io/tag/feature-learning.html">feature learning</a>,    <a href="https://jmetzen.github.io/tag/competition.html">competition</a>,    <a href="https://jmetzen.github.io/tag/deep-learning.html">deep learning</a>,    <a href="https://jmetzen.github.io/tag/machine-learning.html">machine-learning</a>,    <a href="https://jmetzen.github.io/tag/unsupervised-learning.html">unsupervised learning</a>,    <a href="https://jmetzen.github.io/tag/tutorial.html">tutorial</a>  </section>
 
 
 
