@@ -4,7 +4,7 @@ Tags: python, gaussian process, open source, machine-learning
 Slug: 2015-12-17/gp_extra
 comments: true
 Author: Jan Hendrik Metzen
-Summary: Starting from version 0.18 (already available in the post-0.17 master branch), scikit-learn will ship a completely revised Gaussian process module, supporting among other things kernel engineering. While scikit-learn only ships the most common kernels, the gp\_extra project contains some more advanced, non-standard kernels that can seamlessly be used with scikit-learn's GaussianProcessRegressor.
+Summary: Starting from version 0.18 (already available in the post-0.17 master branch), scikit-learn will ship a completely revised Gaussian process module, supporting among other things kernel engineering. While scikit-learn only ships the most common kernels, the gp\_extra project contains some more advanced, non-standard kernels that can seamlessly be used with scikit-learn's GaussianProcessRegressor. This post summarizes the current contents of the package and provides some examples.
 
 {% notebook gp_extra.ipynb%}
 
