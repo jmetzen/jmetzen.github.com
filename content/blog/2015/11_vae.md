@@ -1,6 +1,6 @@
 Title: Variational Autoencoder in TensorFlow
 Date: 2015-11-27 19:30
-Tags: python, unsupervised learning
+Tags: python, unsupervised, feature learning
 Slug: 2015-11-27/vae
 comments: true
 Author: Jan Hendrik Metzen
