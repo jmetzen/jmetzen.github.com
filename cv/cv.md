@@ -6,15 +6,10 @@ lastname: Metzen
 photo: images/picture.jpg
 contact: https://jmetzen.github.io/
 homepage: https://jmetzen.github.io/
-#email: jhm@informatik.uni-bremen.de
-#phone: '+49 421 178 45-4123'
-#address:
-#  city:  Robert-Hooke-Straße 1 <br /> 28359 Bremen <br />  Germany
 email: janmetzen@mailbox.org
-mobile: '+49 (0) 172 7563092'
-phone: '+49 (0) 4221 4901481'
+#mobile: '+49 (0) 172 7563092'
 address:
-  city: Schliemannstraße 24 <br /> 27749 Delmenhorst <br />
+  city:  <br /> 71032 Böblingen <br />
   country: Germany
 settings:
   protect-email: true
@@ -33,7 +28,7 @@ Date of Birth
 :     8th January 1981
 
 Civil Status
-:     Married, one daughter (age: 6 month)
+:     Married, one daughter
 
 Nationality
 :     German
@@ -61,8 +56,12 @@ Education
 Professional Experience
 -----------------------
 
-11/2009 - current
-:    Research assistant \
+03/2016 - current
+:    Research Engineer \
+     Robert Bosch GmbH, Corporate Research, AEY2
+
+11/2009 - 02/2016
+:    Research Assistant \
      Robotics Research Group, University of Bremen
 
 07/2007 - 10/2009
@@ -77,15 +76,15 @@ Professional Experience
 Leading and Management Experience
 ---------------------------------
 
-08/2014 - current
+08/2014 - 01/2016
 :    Project leader ["CASCADE: Cognitive AutonomouS CAtheters operating in Dynamic Environments"](http://robotik.dfki-bremen.de/en/research/projects/cascade.html), \
      Robotics Research Group, University Bremen
 
-01/2013 - current
+01/2013 - 12/2015
 :    Team leader ["Sustained Learning"](http://robotik.dfki-bremen.de/en/research/teams.html#c1585), \
      Robotics Innovation Center, German Research Center for Artificial Intelligence (DFKI RIC, Bremen)
 
-01/2008 - current
+01/2008 - 01/2016
 :    Organizer of workgroup "Machine Learning and Optimization" \
      Robotics Research Group, University Bremen
 

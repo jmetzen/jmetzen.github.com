@@ -9,8 +9,7 @@ This site features topics on scientific python and machine learning.
 Blog posts are mostly based on IPython notebooks.
 
 ## Myself
-I am a research assistant at the robotics group of the University of Bremen and
-team leader of the team "Learning" of the Robotics Innovation Center, German Research Center for Artificial Intelligence (DFKI, Bremen). See also [my work homepage](http://www.informatik.uni-bremen.de/~jhm/).
+I am a research engineer in the group AEY2 of the corporate research at Robert Bosch GmbH in Renningen, Germany.
 
 You can find my CV [here](../cv/cv.html)
 
