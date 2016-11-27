@@ -109,20 +109,7 @@ Programming languages
 Software Packages
 :     MS Office/Libre Office, LaTeX, revision control software (SVN, git, mercurial), painting and graphics software (Gimp, Inkscape), machine learning tools (scikit-learn, caffe, theano), computer vision tools (scikit-image, OpenCV)
 
-Research Foci
------------------
 
-Robot Control Learning
-:    I am developing and extending methods from the domain of reinforcement learning ([relevant publications](https://jmetzen.github.io/publications/class_rescat.html#Reinforcement%20Learning)) and evolutionary computation ([relevant publications](https://jmetzen.github.io/publications/class_rescat.html#Neuroevolution)) for learning locomotion and manipulation behaviors of mobile robots. In particular, developing methods for decomposing complex problems into simpler subproblems and developing learning algorithms which combine policy search with active and multi-task learning have been foci of my work. I have conducted this work as part of the project [BesMan](http://robotik.dfki-bremen.de/en/research/projects/besman-1.html).
-
-BCIs
-:    My work in Brain Computer Interfaces (BCIs) was focused on using supervised machine learning techniques to detect certain patterns in a human's electroencephalogram (EEG) that indicate that the human has perceived and recognized important messages that have been presented to him or that he intends to execute a movement shortly. My work in the [VI-Bot](http://robotik.dfki-bremen.de/en/research/projects/vi-bot.html) and [IMMI](http://robotik.dfki-bremen.de/en/research/projects/immi.html) projects was focused mainly on developing supervised multi-task learning algorithms that allow detecting these patterns with a minimum amount of labeled training data from the current user by reusing data from historic sessions of the same and other users ([relevant publications](https://jmetzen.github.io/publications/class_rescat.html#Brain%20Computer%20Interface)).
-
-Biomedical Pattern Recognition
-:    Identifying patterns in biomedical data has been one focus of my work. Besides the work on BCIs, I have also developed novel graph-based methods for the matching of anatomical trees of liver and lung extracted from medical images recorded using CT and MRI, which allow the registration of several medical images of the same organ that have been recorded using different modalities or at different points in time ([relevant publications](https://jmetzen.github.io/publications/class_rescat.html#Graph%20Matching%20)). More currently, within the project [Cascade](http://robotik.dfki-bremen.de/en/research/projects/cascade-1.html), we have applied oversegmentation and supervised machine learning approaches to detect aortic calcifications and bifurcations in intravascular ultrasound (IVUS) and CT recordings.
-
-Deep Learning
-:    Together with colleagues, I am currently developing deep learning methods for detecting objects in RGB images of unstructured environments and for identifying suitable grasp poses for robotic manipulators based on RGB-D data. For this, a set of candidate regions in images which may contain objects is generated based on a heuristic and each of these regions is then classified using a deep neural network into different object categories. Another neural network is used to classify different grasp pose candidates for the detected objects into feasible and not feasible for a robotic gripper.
 
 Scientific Publications
 -----------------------
@@ -154,9 +141,6 @@ Open Source Software
 
 I regularly contribute to open source machine learning software in the following projects:
 
-[BOLeRo](http://robotik.dfki-bremen.de/de/forschung/softwaretools/bolero.html)
-:    **Core contributor**. BOLeRo provides tools to learn behaviors for robots. That includes behavior representations as well as reinforcement learning, black-box optimization, and evolutionary algorithms and imitation learning. It provides a C++ and a Python interface to be efficient where this is required and to be flexible and convenient where performance is not an issue. Because the library provides a C++ interface, it is easy to integrate in most robotic frameworks, e.g. the robot operating system (ROS) or the robot construction kit (Rock).
-
 [scikit-learn](http://scikit-learn.org/stable/)
 :    **Core contributor**. scikit-learn is the de-facto standard tool for machine learning in the scientific Python tool stack. It is widely used in academia and industry. I have contributed tools for [probability calibration of classifiers](http://scikit-learn.org/stable/modules/calibration.html) and for [kernel ridge regression](http://scikit-learn.org/stable/modules/kernel_ridge.html) to scikit-learn. Moreover, I have written a complete redesign of the Gaussian process module in this [pull request](https://github.com/scikit-learn/scikit-learn/pull/4270), which will be contained in version 0.18 of scikit-learn.
 
@@ -166,9 +150,14 @@ I regularly contribute to open source machine learning software in the following
 [MMLF](http://mmlf.sourceforge.net/)
 :    **Lead developer**. The Maja Machine Learning Framework (MMLF) is a general framework for problems in the domain of Reinforcement Learning (RL) written in python. It provides a set of RL related algorithms and a set of benchmark domains. Furthermore it is easily extensible and allows to automate benchmarking of different agents. Among the RL algorithms are TD(lambda), CMA-ES, Fitted R-Max, Monte-Carlo learning, the DYNA-TD and the actor-critic architecture. MMLF contains different variants of the maze-world and pole-balancing problem class as well as the mountain-car testbed and the pinball maze domain.
 
+[BOLeRo](http://robotik.dfki-bremen.de/de/forschung/softwaretools/bolero.html)
+:    **Core contributor**. BOLeRo provides tools to learn behaviors for robots. That includes behavior representations as well as reinforcement learning, black-box optimization, and evolutionary algorithms and imitation learning. It provides a C++ and a Python interface to be efficient where this is required and to be flexible and convenient where performance is not an issue. Because the library provides a C++ interface, it is easy to integrate in most robotic frameworks, e.g. the robot operating system (ROS) or the robot construction kit (Rock).
 
 Scientific Community
 --------------------
+
+2016
+:    Program Committee NIPS Workshop on Bayesian Optimization [BayesOpt 2016](https://bayesopt.github.io/index.html)
 
 2015
 :    Reviewer of the [Journal of Medical Robotics Research](http://www.worldscientific.com/worldscinet/jmrr)
@@ -176,11 +165,8 @@ Scientific Community
 2015
 :    Scientific Program Committee of the [International Symposium on Intelligent Computing Systems](http://www.isics-symposium.org/)
 
-2015
+2015-2016
 :    Reviewer of the [Artificial Intelligence](http://www.journals.elsevier.com/artificial-intelligence) journal
-
-2015
-:    Scientific Program Committee of the International Symposium on Intelligent Computing Systems ([ISICS 2016](http://www.isics-symposium.org/))
 
 2014
 :    Reviewer of the [Scientific Reports](http://www.nature.com/srep/index.html) journal of the Nature publisher
@@ -192,7 +178,7 @@ Scientific Community
 :    Reviewer of the [Journal of Machine Learning Research (JMLR)](http://jmlr.org/)
 
 2012
-:    Program committee of 5th International Workshop on Evolutionary and Reinforcement Learning for Autonomous Robot Systems ([ERLARS 2012](http://www.erlars.org/2012/))
+:    Program Committee of 5th International Workshop on Evolutionary and Reinforcement Learning for Autonomous Robot Systems ([ERLARS 2012](http://www.erlars.org/2012/))
 
 2009
 :    Reviewer of the [Image and Vision Computing Journal (IVC)](http://www.journals.elsevier.com/image-and-vision-computing/)
