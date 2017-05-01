@@ -57,8 +57,8 @@ Professional Experience
 -----------------------
 
 03/2016 - current
-:    Research Engineer \
-     Robert Bosch GmbH, Corporate Research, AEY2
+:    Researcher \
+     Bosch Center for Artificial Intelligence (BCAI), Robert Bosch GmbH
 
 11/2009 - 02/2016
 :    Research Assistant \
@@ -174,7 +174,7 @@ Scientific Community
 2013
 :    Reviewer of the [Frontiers in Cognitive Science](http://www.frontiersin.org/Cognitive_Science) journal
 
-2013-2014
+2013-2014, 2017
 :    Reviewer of the [Journal of Machine Learning Research (JMLR)](http://jmlr.org/)
 
 2012
@@ -234,7 +234,7 @@ Diploma theses:
 
 Master theses:
 
-ongoing
+10/2015
 :    Contextual Policy Search for Ball-Throwing on a Real Robots
 
 05/2015
